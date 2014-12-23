@@ -38,18 +38,6 @@ header h2 {
     margin: 20px;
 }
 
-.aside ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    clear: both;
-}
-
-.aside ul li {
-    margin: 20px;
-    display: block;
-}
-
 .button {
     text-align: center;
     color: white;
@@ -69,8 +57,4 @@ aside .button {
 
 .button:hover {
     background-color: rgb(255, 198, 36);
-}
-
-.aside ul li .button {
-    width: 100%;
 }

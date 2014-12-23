@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="AdsProject">
     <head>
         <title>Ads-Home</title>
         <link href="styles/style.css" rel="stylesheet" />
@@ -10,16 +10,8 @@
 
         </header>
         
-        <div id="wrapper">
-            <aside class="container aside">
-                <p>To publish a new ad, please login.</p>
-                <!--<ul>
-                        <li><a class="button" href="#">Login</a></li>
-                        <li><a class="button" href="#">Register</a></li>
-                    </ul>-->
-                <a class="button" href="#">Login</a>
-                <a class="button" href="#">Register</a>
-            </aside>
+        <div id="wrapper" ng-view="">
+            
             
 
         </div>
@@ -30,6 +22,9 @@
         </footer>
 
         <script src="libs/angular.js"></script>
+        <script src="libs/angular-route.js"></script>
         <script src="libs/jquery.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/controllers/HomeController.js"></script>
     </body>
 </html>
