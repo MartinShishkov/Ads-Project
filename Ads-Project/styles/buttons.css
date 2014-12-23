@@ -1,0 +1,21 @@
+﻿.button {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(81, 135, 102);
+    text-shadow: 0px 1px 3px #000000;
+    background-color: rgb(112, 173, 71);
+}
+
+.button:hover {
+    background-color: rgb(255, 198, 36);
+}
+
+aside .button {
+    margin: 15px;
+    display: block;
+}
+
