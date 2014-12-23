@@ -1,5 +1,4 @@
-﻿/// <reference path="C:\Users\Martin\Documents\Ads-Project\Ads-Project\index.html" />
-(function() {
+﻿(function() {
     var app = angular.module('AdsProject', ["ngRoute"]);
     console.log("Success: App created.");
 
@@ -8,6 +7,10 @@
             .when("/", {
                 templateUrl: "./views/main.html",
                 controller: "homeController"
+            })
+            .when("/login", {
+                templateUrl: "./views/login.html",
+                controller: "loginController"
             })
             .otherwise({redirectTo: "/"});
 

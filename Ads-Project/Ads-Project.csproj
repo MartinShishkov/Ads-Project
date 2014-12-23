@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\controllers\HomeController.js" />
+    <Content Include="app\controllers\loginController.js" />
     <Content Include="index.html" />
     <Content Include="libs\angular-route.js" />
     <Content Include="libs\angular.js" />
