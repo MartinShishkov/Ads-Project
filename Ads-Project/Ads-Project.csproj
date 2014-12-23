@@ -75,8 +75,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="partials\" />
-    <Folder Include="scripts\" />
+    <Folder Include="controllers\" />
+    <Folder Include="views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
