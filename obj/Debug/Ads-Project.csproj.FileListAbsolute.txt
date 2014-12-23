@@ -1,0 +1,6 @@
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\ExamSolution\Ads-Project\bin\Ads-Project.dll.config
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\ExamSolution\Ads-Project\bin\Ads-Project.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\ExamSolution\Ads-Project\bin\Ads-Project.pdb
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\ExamSolution\Ads-Project\obj\Debug\Ads-Project.csprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\ExamSolution\Ads-Project\obj\Debug\Ads-Project.dll
+C:\Users\Martin\Documents\Visual Studio 2013\Projects\ExamSolution\Ads-Project\obj\Debug\Ads-Project.pdb
