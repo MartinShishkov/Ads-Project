@@ -61,6 +61,7 @@
     <Content Include="libs\angular.js" />
     <Content Include="libs\jquery.js" />
     <Content Include="styles\style.css" />
+    <Content Include="views\login.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controllers\" />
-    <Folder Include="views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
