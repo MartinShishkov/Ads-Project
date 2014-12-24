@@ -13,10 +13,12 @@
     margin: 5px;
     display: block;
     margin-right: 30px;
+    width: 300px;
+    word-wrap: break-word;
 }
 
 .ad #adDate {
-    float: left;
+    float: right;
 }
 
 .ad #adText {
