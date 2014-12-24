@@ -5,7 +5,8 @@
 }
 header {
     position: relative;
-    margin: 0px auto;
+    margin: 0px auto; 
+    margin-bottom: 20px;
     text-align: center;
     background-color: rgb(169, 209, 142);
     padding: 15px;

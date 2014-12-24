@@ -14,8 +14,19 @@
     background-color: rgb(255, 198, 36);
 }
 
-aside .button {
+#aside-actions .button {
     margin: 15px;
     display: block;
 }
 
+#aside-categories .category {
+    padding: 10px;
+}
+
+#aside-categories .category h4 {
+    margin: 0px;
+}
+
+#aside-categories .category:hover {
+    background-color: rgb(104, 153, 56);
+}

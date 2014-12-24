@@ -5,9 +5,28 @@
     box-shadow: 0px 1px 5px #888888;
 }
 
-.aside {
+#aside-actions {
     float: left;
     width: 200px;
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
+#aside-categories {
+    float: right;
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#aside-categories h3 {
+    text-align: center;
+    margin: 0px;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+#aside-categories ul {
+    list-style: none;
+    padding: 0px;
+}
