@@ -17,6 +17,9 @@
         $http.get(rootUrl + "categories")
              .then(onCategoriesLoad);
 
+        // getting all towns
+        $http.get(rootUrl + "towns")
+             .then(onTownsLoad);
 
         function onAdsLoad(result) {
             $scope.ads = result.data.ads;
@@ -24,6 +27,11 @@
 
         function onCategoriesLoad(result) {
             $scope.categories = result.data;
+        }
+
+        function onTownsLoad(result) {
+            console.log(result);
+            $scope.towns = result.data;
         }
     }
 

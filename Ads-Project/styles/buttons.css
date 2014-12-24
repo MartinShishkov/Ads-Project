@@ -30,3 +30,15 @@
 #aside-categories .category:hover {
     background-color: rgb(104, 153, 56);
 }
+
+#aside-towns .town {
+    padding: 10px;
+}
+
+#aside-towns .town h4 {
+    margin: 0px;
+}
+
+#aside-towns .town:hover {
+    background-color: rgb(104, 153, 56);
+}
