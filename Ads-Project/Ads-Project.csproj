@@ -65,6 +65,7 @@
     <Content Include="libs\angular-route.js" />
     <Content Include="libs\angular.js" />
     <Content Include="libs\jquery.js" />
+    <Content Include="styles\ads.css" />
     <Content Include="styles\buttons.css" />
     <Content Include="styles\containers.css" />
     <Content Include="styles\main.css" />

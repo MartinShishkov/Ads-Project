@@ -1,0 +1,63 @@
+﻿#ads-field {
+}
+
+.ad {
+    float: left;
+    display: block;
+    margin: 20px;
+    width: 500px;
+}
+
+.ad #adTitle {
+    float: left;
+    margin: 5px;
+    display: block;
+    margin-right: 30px;
+}
+
+.ad #adDate {
+    float: left;
+}
+
+.ad #adText {
+    width: 300px;
+    resize: none;
+    height: 100px;
+    display: block;
+    clear: both;
+    float: right;
+}
+
+.ad #userInfo {
+    float: right;
+    display: block;
+    clear: both;
+    width: 300px;
+}
+
+.ad #userInfo .info-field input {
+    display: inline-block;
+    width: 200px;
+    float: right;
+    height: 25px;
+    background-color: rgb(197, 224, 180);
+    border: 1px dashed rgb(95, 157, 64);
+    padding-left: 10px;
+}
+
+.ad #userInfo label {
+    display: inline-block;
+}
+
+.ad #userInfo .info-field {
+    margin: 20px;
+    margin-right: 0px;
+    display: block;
+}
+
+.ad #adImage {
+    float: left;
+    display: block;
+    max-width: 200px;
+    height: 100px;
+}

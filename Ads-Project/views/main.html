@@ -3,3 +3,31 @@
     <a class="button" href="#/login">Login</a>
     <a class="button" href="#/register">Register</a>
 </aside>
+
+<div id="ads-field">
+    <div ng-repeat="ad in ads" class="ad container">
+        <h2 id="adTitle">{{ad.title}}</h2>
+        <span id="adDate">{{ad.date | date:'short'}}</span>
+        <textarea id="adText" disabled="">{{ad.text}}</textarea>
+        
+        <img id="adImage" src="{{ad.imageDataUrl}}"/>
+
+        <div id="userInfo">
+            <div class="info-field">
+                <label for="ownerName">Name</label>
+                <input type="text" name="ownerName" disabled="" value="{{ad.ownerName}}" />
+            </div>
+            
+            <div class="info-field">
+                <label for="ownerEmail">Email:</label>
+                <input type="email" name="ownerEmail" disabled="" value="{{ad.ownerEmail}}" />
+            </div>
+            
+            <div class="info-field">
+                <label for="ownerPhone">Tel.</label>
+                <input type="text" name="ownerPhone" disabled="" value="{{ad.ownerPhone}}" />
+            </div>
+        </div>
+    </div>
+</div>
+
