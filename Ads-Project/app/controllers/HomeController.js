@@ -3,9 +3,6 @@
     var module = angular.module('AdsProject');
 
     var homeController = function($scope, $http, rootUrl) {
-        console.log("In home controller");
-        console.log(rootUrl);
-
         var pageSize = 2;
         var startPage = 1;
 
@@ -30,9 +27,16 @@
         }
 
         function onTownsLoad(result) {
-            console.log(result);
             $scope.towns = result.data;
         }
+
+        //var selectCategory = function (category, event) {
+        //    console.log(category);
+        //    console.log(event.target);
+        //    $(event.target.parent()).attr('background-color', '#ffbf26');
+        //}
+
+        //$scope.selectCategory = selectCategory;
     }
 
     module.controller('homeController', homeController);

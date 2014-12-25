@@ -5,7 +5,6 @@
     // defining the root url for the services
     // to use across all controllers
     app.value("rootUrl", "http://localhost:1337/api/");
-    console.log("Success: App created.");
 
     app.config(function ($routeProvider) {
 

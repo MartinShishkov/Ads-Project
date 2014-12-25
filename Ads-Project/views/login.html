@@ -1,4 +1,11 @@
-﻿<form class="container">
-    <input type="text"/>
-    <input type="submit" value="Log in" class="button"/>
+﻿<form class="container" id="login-form">
+    <h3>Login</h3>
+    <label for="loginName">Username:</label>
+    <input name="loginName" type="text" ng-model="loginName"/>
+    
+    <label for="loginPassword">Password:</label>
+    <input name="loginPassword" type="password" ng-model="loginPassword" />
+
+    <input type="submit" value="Log in" class="button" ng-click="attemptLogin()"/>
+    <a href="#/register">Register here</a>
 </form>
