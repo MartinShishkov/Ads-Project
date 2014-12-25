@@ -1,9 +1,31 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
+﻿<form class="container" id="register-form">
+    <h3>User Registration</h3>
+    
+    
+    <label for="registerUsername">Username:</label>
+    <input name="registerUsername" type="text" ng-model="registerUsername" />
 
-</body>
-</html>
+    <label for="loginPassword">Password:</label>
+    <input name="loginPassword" type="password" ng-model="loginPassword" />
+
+    <label for="registerName">Name:</label>
+    <input name="registerName" type="text" ng-model="registerName" />
+
+    <label for="registerPhone">Phone:</label>
+    <input name="registerPhone" type="text" ng-model="registerPhone" />
+    
+    <label for="loginPasswordConfirm">Confirm Password:</label>
+    <input name="loginPasswordConfirm" type="password" ng-model="loginPasswordConfirm" />
+
+    <label for="registerEmail">Email:</label>
+    <input name="registerEmail" type="email" ng-model="registerEmail" />
+        
+    <label for="registerTown">Town:</label>
+    <select name="registerTown">
+        <option>Town1</option>
+        <option>Town2</option>
+    </select>
+
+    <input type="submit" value="Register" class="button" ng-click="attemptLogin()" />
+    <a href="#/login">Login here</a>
+</form>
