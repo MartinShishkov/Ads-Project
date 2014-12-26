@@ -2,21 +2,15 @@
     // a reference to the application
     var module = angular.module('AdsProject');
 
-    var homeController = function($scope, $http, rootUrl, Auth) {
+    var homeController = function($scope, DataQueryExecutor, Auth) {
         var pageSize = 2;
         var startPage = 1;
 
-        // getting all ads
-        $http.get(rootUrl + "ads?pagesize=" + pageSize + "&startpage=" + startPage)
-             .then(onAdsLoad);
+        DataQueryExecutor.getAds(pageSize, startPage).then(onAdsLoad);
 
-        // getting all categories
-        $http.get(rootUrl + "categories")
-             .then(onCategoriesLoad);
+        DataQueryExecutor.getCategories().then(onCategoriesLoad);
 
-        // getting all towns
-        $http.get(rootUrl + "towns")
-             .then(onTownsLoad);
+        DataQueryExecutor.getTowns().then(onTownsLoad);
 
         function onAdsLoad(result) {
             $scope.ads = result.data.ads;
