@@ -101,3 +101,12 @@
 #register-form input[type=submit]{
     width: 100px;
 }
+
+header #user-panel {
+    height: 100%;
+    float: right;
+}
+
+header #user-panel span, a {
+    margin-right: 20px
+}

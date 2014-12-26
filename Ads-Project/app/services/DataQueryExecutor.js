@@ -14,6 +14,9 @@
             return $http.get(rootUrl + "towns");
         }
 
+        // TODO: Implement further logic
+        ////////////////////////////////
+
         return {
             getAds: getAds,
             getCategories: getCategories,

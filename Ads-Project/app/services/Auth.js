@@ -2,7 +2,6 @@
     var module = angular.module('AdsProject');
 
     var Auth = function ($http, Session, rootUrl) {
-
         var login = function (credentials) {
             var user = {
                 username: credentials.username,

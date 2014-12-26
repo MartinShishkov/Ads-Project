@@ -27,14 +27,6 @@
         (function() {
             console.log("Is logged: " + Auth.isAuthenticated());
         }());
-
-        //var selectCategory = function (category, event) {
-        //    console.log(category);
-        //    console.log(event.target);
-        //    $(event.target.parent()).attr('background-color', '#ffbf26');
-        //}
-
-        //$scope.selectCategory = selectCategory;
     }
 
     module.controller('homeController', homeController);

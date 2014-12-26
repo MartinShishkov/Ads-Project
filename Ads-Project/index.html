@@ -8,9 +8,12 @@
         <link href="styles/ads.css" rel="stylesheet" />
     </head>
     <body>
-        <header class="container">
+        <header class="container" ng-controller="headerController">
+            <div ng-show="user" id="user-panel">
+                <span ng-cloak="">{{user.username}}</span>
+                <a href="#/login" ng-click="logout()" ng-cloak="">Logout</a>
+            </div>
             <h2>Ads-Home</h2>
-
         </header>
         
         <div id="wrapper" ng-view="">
@@ -32,6 +35,7 @@
         <script src="app/services/Auth.js"></script>
         <script src="app/services/DataQueryExecutor.js"></script>
         <script src="app/controllers/HomeController.js"></script>
+        <script src="app/controllers/HeaderController.js"></script>
         <script src="app/controllers/LoginController.js"></script>
         <script src="app/controllers/RegisterController.js"></script>
         <script src="app/controllers/HomeLoggedController.js"></script>
