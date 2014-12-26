@@ -1,12 +1,12 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var loginController = function ($scope, Auth) {
+    var loginController = function ($scope, $location, Auth) {
         function attemptLogin(credentials) {
             Auth.login(credentials)
                 .then(function(result) {
-                    isLogged();
-                });
+                $location.path("/home");
+            });
         }
 
         function isLogged() {

@@ -24,10 +24,15 @@
             return !!Session.user;
         }
 
+        var getUser = function() {
+            return Session.getUser();
+        }
+
         return {
             login: login,
             logout: logout,
-            isAuthenticated: isAuthenticated
+            isAuthenticated: isAuthenticated,
+            getUser: getUser
         };
     }
 

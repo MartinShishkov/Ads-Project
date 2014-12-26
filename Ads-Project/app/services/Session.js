@@ -12,9 +12,14 @@
             this.user = null;
         };
 
+        var getUser = function() {
+            return this.user;
+        }
+
         return {
             create: create,
-            destroy: destroy
+            destroy: destroy,
+            getUser: getUser
         };
     }
 

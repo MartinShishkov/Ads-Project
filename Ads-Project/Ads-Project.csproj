@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\controllers\HomeController.js" />
+    <Content Include="app\controllers\HomeLoggedController.js" />
     <Content Include="app\controllers\LoginController.js" />
     <Content Include="app\controllers\RegisterController.js" />
     <Content Include="app\services\Auth.js" />
@@ -72,6 +73,7 @@
     <Content Include="styles\containers.css" />
     <Content Include="styles\main.css" />
     <Content Include="views\login.html" />
+    <Content Include="views\main-logged-in.html" />
     <Content Include="views\main.html" />
     <Content Include="views\register.html" />
     <Content Include="Web.config" />

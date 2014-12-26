@@ -7,7 +7,6 @@
     app.value("rootUrl", "http://localhost:1337/api/");
 
     app.config(function ($routeProvider) {
-
         $routeProvider
             .when("/", {
                 templateUrl: "./views/main.html",
@@ -21,6 +20,21 @@
                 templateUrl: "./views/register.html",
                 controller: "registerController"
             })
+            .when('/home', {
+                templateUrl: "./views/main-logged-in.html",
+                controller: "homeLoggedController",
+                resolve: { loginRequired: loginRequired }
+            })
             .otherwise({redirectTo: "/"});
     });
+
+    var loginRequired = function($location, $q, Auth) {
+        var deferred = $q.defer();
+
+        if (Auth.isAuthenticated() == false) {
+            deferred.reject();
+            $location.path('/login');
+        }
+
+    }
 }());
