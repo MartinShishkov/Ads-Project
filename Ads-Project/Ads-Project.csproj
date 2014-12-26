@@ -61,6 +61,8 @@
     <Content Include="app\controllers\HomeController.js" />
     <Content Include="app\controllers\LoginController.js" />
     <Content Include="app\controllers\RegisterController.js" />
+    <Content Include="app\services\Auth.js" />
+    <Content Include="app\services\Session.js" />
     <Content Include="index.html" />
     <Content Include="libs\angular-route.js" />
     <Content Include="libs\angular.js" />

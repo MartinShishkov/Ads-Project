@@ -2,7 +2,7 @@
     // a reference to the application
     var module = angular.module('AdsProject');
 
-    var homeController = function($scope, $http, rootUrl) {
+    var homeController = function($scope, $http, rootUrl, Auth) {
         var pageSize = 2;
         var startPage = 1;
 
@@ -29,6 +29,10 @@
         function onTownsLoad(result) {
             $scope.towns = result.data;
         }
+
+        (function() {
+            console.log("Is logged: " + Auth.isAuthenticated());
+        }());
 
         //var selectCategory = function (category, event) {
         //    console.log(category);

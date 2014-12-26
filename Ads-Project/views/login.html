@@ -1,11 +1,11 @@
-﻿<form class="container" id="login-form">
+﻿<form class="container" id="login-form" ng-submit="attemptLogin(credentials)">
     <h3>Login</h3>
     <label for="loginName">Username:</label>
-    <input name="loginName" type="text" ng-model="loginName"/>
+    <input name="loginName" type="text" ng-model="credentials.username"/>
     
     <label for="loginPassword">Password:</label>
-    <input name="loginPassword" type="password" ng-model="loginPassword" />
+    <input name="loginPassword" type="password" ng-model="credentials.password" />
 
-    <input type="submit" value="Log in" class="button" ng-click="attemptLogin()"/>
+    <input type="submit" value="Log in" class="button"/>
     <a href="#/register">Register here</a>
 </form>

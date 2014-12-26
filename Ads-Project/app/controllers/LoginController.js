@@ -1,24 +1,21 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var loginController = function ($scope, $http, rootUrl) {
-        function attemptLogin() {
-            var user = {
-                username: $scope.loginName,
-                password: $scope.loginPassword
-            }
+    var loginController = function ($scope, Auth) {
+        function attemptLogin(credentials) {
+            Auth.login(credentials)
+                .then(function(result) {
+                    isLogged();
+                });
+        }
 
-            $http.post(rootUrl + "user/login", user)
-                 .then(onSuccessfulLogin);
-
-            function onSuccessfulLogin(result) {
-                console.log(result);
-            }
+        function isLogged() {
+            console.log(Auth.isAuthenticated());
         }
 
         $scope.attemptLogin = attemptLogin;
 
-
+        
     }
 
     module.controller('loginController', loginController);
