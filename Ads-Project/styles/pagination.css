@@ -2,7 +2,7 @@
     float: left;
     display: block;
     position: absolute;
-    bottom: 100px;
+    bottom: 0px;
 }
 
 .paginationBtn {

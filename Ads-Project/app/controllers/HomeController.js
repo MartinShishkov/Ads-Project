@@ -4,7 +4,9 @@
 
     var homeController = function($scope, DataQueryExecutor) {
         var pageSize = 2;
+        //var pageSize = 1;
         var startPage = 1;
+        var displayPages = 4;
 
         $scope.activePage = startPage;
 
@@ -16,19 +18,16 @@
 
         function onAdsLoad(result) {
             $scope.ads = result.data.ads;
-            $scope.pages = loadPages(result.data.numPages);
-        };
+            $scope.allPages = result.data.numPages;
+            //$scope.pages = loadPages(result.data.numPages);
 
-        function loadPages(numPages) {
-            var pages = [];
-            for (var i = 0; i < numPages; i++) {
-                pages[i] = {
-                    title: (i + 1).toString(),
-                    pageNumber: i + 1
-                };
-            }
-            return pages;
-        }
+            // getting the new set of pages and removing
+            // the undefined elements from the array
+            $scope.pages = loadPages(displayPages)
+                                    .filter(function (obj) {
+                                        return obj != undefined;
+                                    });
+        };
 
         function onCategoriesLoad(result) {
             $scope.categories = result.data;
@@ -38,7 +37,42 @@
             $scope.towns = result.data;
         }
 
-        // Pagination logic
+
+        // ======================= Pagination Logic =================================
+
+        //function loadPages(numPages) {
+        //    var pages = [];
+
+        //    for (var i = 0; i < numPages; i++) {
+        //        pages[i] = {
+        //            title: (i + 1).toString(),
+        //            pageNumber: i + 1
+        //        };
+        //    }
+        //    return pages;
+        //}
+
+        // if problems with undefined values in the array occur
+        // use .. track by $index in the ng-repeat directive of the <li> items
+        // Ex.: ng-repeat="page in pages track by $index"
+        function loadPages(numPages) {
+            var pages = [];
+
+            var newPages = numPages + ($scope.activePage - 1);
+            if (newPages > $scope.allPages) {
+                newPages = $scope.allPages;
+            }
+
+            for (var i = $scope.activePage - 1; i < newPages; i++) {
+
+                pages[i] = {
+                    title: (i + 1).toString(),
+                    pageNumber: i + 1
+                };
+            }
+            return pages;
+        }
+        
         $scope.goToPage = function(pageNumber) {
             $scope.activePage = pageNumber;
             DataQueryExecutor.getAds(pageSize, pageNumber).then(onAdsLoad);
@@ -54,7 +88,7 @@
         }
 
         $scope.goToLastPage = function () {
-            $scope.activePage = $scope.pages.length;
+            $scope.activePage = $scope.allPages;
             $scope.goToPage($scope.activePage);
         }
 
@@ -66,7 +100,7 @@
         }
 
         $scope.onePageForward = function () {
-            if ($scope.activePage < $scope.pages.length) {
+            if ($scope.activePage < $scope.allPages) {
                 $scope.activePage++;
                 $scope.goToPage($scope.activePage);
             }
