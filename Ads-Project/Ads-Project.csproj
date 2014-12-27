@@ -61,7 +61,6 @@
     <Content Include="app\controllers\EditUserController.js" />
     <Content Include="app\controllers\HeaderController.js" />
     <Content Include="app\controllers\HomeController.js" />
-    <Content Include="app\controllers\HomeLoggedController.js" />
     <Content Include="app\controllers\LoginController.js" />
     <Content Include="app\controllers\NavigationController.js" />
     <Content Include="app\controllers\RegisterController.js" />
@@ -80,7 +79,6 @@
     <Content Include="styles\main.css" />
     <Content Include="views\edit-user-profile.html" />
     <Content Include="views\login.html" />
-    <Content Include="views\main-logged-in.html" />
     <Content Include="views\main.html" />
     <Content Include="views\register.html" />
     <Content Include="views\user-ads-publish.html" />

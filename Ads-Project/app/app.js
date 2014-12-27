@@ -21,14 +21,14 @@
                 controller: "registerController"
             })
             .when('/user/home', {
-                templateUrl: "./views/main-logged-in.html",
-                controller: "homeLoggedController",
+                templateUrl: "./views/main.html",
+                controller: "homeController",
                 resolve: { loginRequired: loginRequired }
             })
             .when('/user/ads', {
                 templateUrl: "./views/user-ads.html",
                 controller: "userAdsController",
-                resolve: { loginRequired:loginRequired }
+                resolve: { loginRequired: loginRequired }
             })
             .when('/user/ads/publish', {
                 templateUrl: "./views/user-ads-publish.html",
@@ -50,6 +50,6 @@
             deferred.reject();
             $location.path('/login');
         }
-
     }
+
 }());

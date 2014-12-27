@@ -6,19 +6,13 @@
 
         function attemptLogin(credentials) {
             Auth.login(credentials)
-                .then(function (result) {
+                .then(function () {
                 $rootScope.user = Auth.getUser();
                 $location.path("/user/home");
             });
         }
 
-        function isLogged() {
-            console.log(Auth.isAuthenticated());
-        }
-
         $scope.attemptLogin = attemptLogin;
-
-        
     }
 
     module.controller('loginController', loginController);
