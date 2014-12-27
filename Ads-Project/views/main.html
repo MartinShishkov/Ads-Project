@@ -1,10 +1,4 @@
-﻿<aside class="container" id="aside-actions">
-    <p>To publish a new ad, please login.</p>
-    <a class="button" href="#/login">Login</a>
-    <a class="button" href="#/register">Register</a>
-</aside>
-
-<div id="ads-field">
+﻿<div id="ads-field">
     <div ng-repeat="ad in ads" class="ad container">
         <h3 id="adTitle">{{ad.title}}</h3>
         <span id="adDate">{{ad.date | date:'short'}}</span>

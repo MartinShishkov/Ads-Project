@@ -25,6 +25,11 @@
                 controller: "homeLoggedController",
                 resolve: { loginRequired: loginRequired }
             })
+            .when('/userprofile', {
+                templateUrl: "./views/edit-user-profile.html",
+                controller: "editUserController",
+                resolve: { loginRequired: loginRequired }
+            })
             .otherwise({redirectTo: "/"});
     });
 

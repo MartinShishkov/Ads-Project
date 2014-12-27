@@ -3,6 +3,8 @@
 
     var Session = function ($rootScope) {
         // 'this' is the whole Session function
+        // $rootScope.user is required because of the header
+        // in the static part of the application
 
         var create = function (user) {
             this.user = user;

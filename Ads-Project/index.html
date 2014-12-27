@@ -16,12 +16,38 @@
             <h2>Ads-Home</h2>
         </header>
         
+        <aside class="container" id="navigator" ng-show="user" ng-cloak="" ng-controller="navigationController">
+            <h3>Navigation</h3>
+            <ul>
+                <li ng-class="{active:isActiveTab('/home')}">
+                    <a href="#/home">Home</a>
+                </li>
+                <li ng-class="{active:isActiveTab('/login')}">
+                    <a href="#/login">My Ads</a>
+                </li>
+                <li ng-class="{active:isActiveTab('/register')}">
+                    <a href="#/register">Publish New Ad</a>
+                </li>
+                <li ng-class="{active:isActiveTab('/userprofile')}">
+                    <a href="#/userprofile">Edit Profile</a>
+                </li>
+            </ul>
+        </aside>
+        
+        <aside class="container" id="aside-actions" ng-hide="user" ng-cloak="">
+            <p>To publish a new ad, please login.</p>
+            <a class="button" href="#/login">Login</a>
+            <a class="button" href="#/register">Register</a>
+            <a class="button" href="/">Home</a>
+        </aside>
+
+
+
         <div id="wrapper" ng-view="">
             
             
 
         </div>
-
         
         <footer class="container">
             2014 by Software University Foundation, No Rights Reserved
@@ -39,5 +65,7 @@
         <script src="app/controllers/LoginController.js"></script>
         <script src="app/controllers/RegisterController.js"></script>
         <script src="app/controllers/HomeLoggedController.js"></script>
+        <script src="app/controllers/EditUserController.js"></script>
+        <script src="app/controllers/NavigationController.js"></script>
     </body>
 </html>
