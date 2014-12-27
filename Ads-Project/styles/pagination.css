@@ -1,7 +1,8 @@
 ﻿#pagination {
     float: left;
     display: block;
-    position: static;
+    position: absolute;
+    bottom: 100px;
 }
 
 .paginationBtn {
@@ -24,6 +25,10 @@
     width: 26px;
     text-align: center;
     padding: 10px;
+}
+
+.paginationBtn:hover {
+    background-color: rgb(137, 189, 128);
 }
 
 .activePage {

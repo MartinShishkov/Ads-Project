@@ -2,6 +2,7 @@
     width: 575px;
     height: auto;
     display: inline-block;
+    position: relative;
 }
 
 .ad {
