@@ -8,7 +8,7 @@
             Auth.login(credentials)
                 .then(function (result) {
                 $rootScope.user = Auth.getUser();
-                $location.path("/home");
+                $location.path("/user/home");
             });
         }
 

@@ -13,23 +13,23 @@
                 <span ng-cloak="">{{user.username}}</span>
                 <a href="#/login" ng-click="logout()" ng-cloak="">Logout</a>
             </div>
-            <h2>Ads-Home</h2>
+            <h2 ng-cloak="">Ads - {{currentPage}}</h2>
         </header>
         
         <aside class="container" id="navigator" ng-show="user" ng-cloak="" ng-controller="navigationController">
             <h3>Navigation</h3>
             <ul>
-                <li ng-class="{active:isActiveTab('/home')}">
-                    <a href="#/home">Home</a>
+                <li ng-class="{active:isActiveTab('/user/home')}">
+                    <a href="#/user/home">Home</a>
                 </li>
-                <li ng-class="{active:isActiveTab('/login')}">
-                    <a href="#/login">My Ads</a>
+                <li ng-class="{active:isActiveTab('/user/ads')}">
+                    <a href="#/user/ads">My Ads</a>
                 </li>
-                <li ng-class="{active:isActiveTab('/register')}">
-                    <a href="#/register">Publish New Ad</a>
+                <li ng-class="{active:isActiveTab('/user/ads/publish')}">
+                    <a href="#/user/ads/publish">Publish New Ad</a>
                 </li>
-                <li ng-class="{active:isActiveTab('/userprofile')}">
-                    <a href="#/userprofile">Edit Profile</a>
+                <li ng-class="{active:isActiveTab('/user/profile')}">
+                    <a href="#/user/profile">Edit Profile</a>
                 </li>
             </ul>
         </aside>
@@ -40,8 +40,6 @@
             <a class="button" href="#/register">Register</a>
             <a class="button" href="/">Home</a>
         </aside>
-
-
 
         <div id="wrapper" ng-view="">
             
@@ -67,5 +65,7 @@
         <script src="app/controllers/HomeLoggedController.js"></script>
         <script src="app/controllers/EditUserController.js"></script>
         <script src="app/controllers/NavigationController.js"></script>
+        <script src="app/controllers/UserAdsController.js"></script>
+        <script src="app/controllers/UserAdsPublishController.js"></script>
     </body>
 </html>

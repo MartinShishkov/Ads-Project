@@ -65,6 +65,8 @@
     <Content Include="app\controllers\LoginController.js" />
     <Content Include="app\controllers\NavigationController.js" />
     <Content Include="app\controllers\RegisterController.js" />
+    <Content Include="app\controllers\UserAdsController.js" />
+    <Content Include="app\controllers\UserAdsPublishController.js" />
     <Content Include="app\services\Auth.js" />
     <Content Include="app\services\DataQueryExecutor.js" />
     <Content Include="app\services\Session.js" />
@@ -81,6 +83,8 @@
     <Content Include="views\main-logged-in.html" />
     <Content Include="views\main.html" />
     <Content Include="views\register.html" />
+    <Content Include="views\user-ads-publish.html" />
+    <Content Include="views\user-ads.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

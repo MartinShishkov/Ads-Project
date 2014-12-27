@@ -20,12 +20,22 @@
                 templateUrl: "./views/register.html",
                 controller: "registerController"
             })
-            .when('/home', {
+            .when('/user/home', {
                 templateUrl: "./views/main-logged-in.html",
                 controller: "homeLoggedController",
                 resolve: { loginRequired: loginRequired }
             })
-            .when('/userprofile', {
+            .when('/user/ads', {
+                templateUrl: "./views/user-ads.html",
+                controller: "userAdsController",
+                resolve: { loginRequired:loginRequired }
+            })
+            .when('/user/ads/publish', {
+                templateUrl: "./views/user-ads-publish.html",
+                controller: "userAdsPublishController",
+                resolve: { loginRequired: loginRequired }
+            })
+            .when('/user/profile', {
                 templateUrl: "./views/edit-user-profile.html",
                 controller: "editUserController",
                 resolve: { loginRequired: loginRequired }
