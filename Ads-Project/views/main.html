@@ -23,7 +23,24 @@
             </div>
         </div>
     </div>
+    
+    <div id="pagination">
+        <button ng-click="goToFirstPage()" class="paginationBtn">First</button>
+        <button ng-click="onePageBack() " class="paginationBtn">Previous</button>
+        <ul>
+            <li class="paginationBtn"
+                ng-repeat="page in pages"
+                ng-click="goToPage(page.pageNumber)"
+                ng-class="{activePage:isActivePage(page.pageNumber)}">
+                {{page.title}}
+            </li>
+        </ul>
+        <button ng-click="onePageForward()" class="paginationBtn">Next</button>
+        <button ng-click="goToLastPage()" class="paginationBtn">Last</button>
+    </div>
 </div>
+
+
 
 <aside class="container" id="aside-categories">
     <h3>Categories</h3>

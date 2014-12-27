@@ -1,0 +1,33 @@
+﻿#pagination {
+    float: left;
+    display: block;
+    position: static;
+}
+
+.paginationBtn {
+    background-color: rgb(169, 209, 142);
+    border: 1px solid rgb(75, 128, 5);
+    color: black;
+    height: 30px;
+}
+
+#pagination ul {
+    display: inline-block;
+    padding: 0px;
+    list-style: none;
+}
+
+#pagination ul li {
+    display: inline-block;
+    margin: 0 3px;
+    height: 20px;
+    width: 26px;
+    text-align: center;
+    padding: 10px;
+}
+
+.activePage {
+    color: white;
+    background-color: rgb(75, 128, 5);
+}
+
