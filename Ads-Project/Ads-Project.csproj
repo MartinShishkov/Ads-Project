@@ -70,6 +70,7 @@
     <Content Include="app\services\Auth.js" />
     <Content Include="app\services\DataQueryExecutor.js" />
     <Content Include="app\services\Session.js" />
+    <Content Include="app\services\UserQueryExecutor.js" />
     <Content Include="index.html" />
     <Content Include="libs\angular-route.js" />
     <Content Include="libs\angular.js" />
