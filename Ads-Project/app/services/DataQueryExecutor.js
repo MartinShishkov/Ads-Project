@@ -14,13 +14,24 @@
             return $http.get(rootUrl + "towns");
         }
 
+        var getUserAds = function (accessToken) {
+            var headers = {
+                headers: {
+                    'Authorization': "Bearer " + accessToken
+                }
+            }
+
+            return $http.get(rootUrl + "user/ads", headers);
+        }
+
         // TODO: Implement further logic
         ////////////////////////////////
 
         return {
             getAds: getAds,
             getCategories: getCategories,
-            getTowns: getTowns
+            getTowns: getTowns,
+            getUserAds: getUserAds
         };
     }
 

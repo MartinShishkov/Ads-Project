@@ -10,3 +10,9 @@ C:\Users\Martin\Documents\Ads-Project\Ads-Project\bin\Ads-Project.pdb
 C:\Users\Martin\Documents\Ads-Project\Ads-Project\obj\Debug\Ads-Project.csprojResolveAssemblyReference.cache
 C:\Users\Martin\Documents\Ads-Project\Ads-Project\obj\Debug\Ads-Project.dll
 C:\Users\Martin\Documents\Ads-Project\Ads-Project\obj\Debug\Ads-Project.pdb
+C:\Users\Administrator\Documents\Ads-Project\Ads-Project\bin\Ads-Project.dll.config
+C:\Users\Administrator\Documents\Ads-Project\Ads-Project\bin\Ads-Project.dll
+C:\Users\Administrator\Documents\Ads-Project\Ads-Project\bin\Ads-Project.pdb
+C:\Users\Administrator\Documents\Ads-Project\Ads-Project\obj\Debug\Ads-Project.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Ads-Project\Ads-Project\obj\Debug\Ads-Project.dll
+C:\Users\Administrator\Documents\Ads-Project\Ads-Project\obj\Debug\Ads-Project.pdb
