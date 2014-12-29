@@ -80,6 +80,7 @@
     <Content Include="styles\containers.css" />
     <Content Include="styles\main.css" />
     <Content Include="styles\pagination.css" />
+    <Content Include="styles\user-ads-page-styles.css" />
     <Content Include="views\edit-user-profile.html" />
     <Content Include="views\login.html" />
     <Content Include="views\main.html" />

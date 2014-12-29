@@ -67,3 +67,99 @@
     max-width: 170px;
     height: 100px;
 }
+
+/*///////////////////////////////////*/
+#userAds-field {
+    width: 930px;
+    height: 760px;
+    display: inline-block;
+    position: relative;
+}
+
+.userAd {
+    float: left;
+    display: block;
+    margin-bottom: 20px;
+    width: 700px;
+}
+
+.userAd #adTitle {
+    float: left;
+    margin: 5px;
+    display: block;
+    margin-right: 30px;
+    width: 300px;
+    word-wrap: break-word;
+}
+
+.userAd #adDate {
+    float: right;
+}
+
+.userAd #adText {
+    width: 300px;
+    resize: none;
+    height: 100px;
+    display: block;
+    clear: both;
+    float: right;
+}
+
+.userAd #adInfo {
+    float: right;
+    display: block;
+    clear: both;
+    width: 300px;
+}
+
+.userAd #adInfo .info-field input {
+    display: inline-block;
+    width: 200px;
+    float: right;
+    height: 25px;
+    background-color: rgb(197, 224, 180);
+    border: 1px dashed rgb(95, 157, 64);
+    padding-left: 10px;
+}
+
+.userAd #adInfo label {
+    display: inline-block;
+}
+
+.userAd #adInfo .info-field {
+    margin: 20px;
+    margin-right: 0px;
+    display: block;
+}
+
+.userAd #adImage {
+    float: left;
+    display: block;
+    max-width: 170px;
+    height: 100px;
+}
+
+.userAd #adMain {
+    float: left;
+}
+
+.userAd #adState{
+    margin-top: 7%;
+    text-align: center;
+    float: right;
+    padding-left: 20px;
+    border-left: 1px solid rgb(95, 157, 64);
+}
+
+.userAd #adState label{
+    display: block;
+}
+
+.userAd #adState input {
+    display: block;
+    margin: 15px 0px;
+    height: 25px;
+    background-color: rgb(197, 224, 180);
+    border: 1px dashed rgb(95, 157, 64);
+    padding-left: 10px;
+}

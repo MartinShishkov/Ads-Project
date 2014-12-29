@@ -14,18 +14,6 @@
             
         }
 
-        var getAds = function (pageSize, startPage) {
-            return $http.get(rootUrl + "ads?pagesize=" + pageSize + "&startpage=" + startPage);
-        };
-
-        var getCategories = function () {
-            return $http.get(rootUrl + "categories");
-        }
-
-        var getTowns = function () {
-            return $http.get(rootUrl + "towns");
-        }
-
         return {
             registerUser: registerUser,
             getUserProfile: getUserProfile,

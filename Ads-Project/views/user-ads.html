@@ -1,26 +1,86 @@
-﻿<div id="ads-field">
-    <div ng-repeat="userAd in userAds" class="ad container">
-        <h3 id="adTitle">{{ad.title}}</h3>
-        <span id="adDate">{{ad.date | date:'short'}}</span>
-        <textarea id="adText" disabled="">{{ad.text}}</textarea>
+﻿<link href="../styles/user-ads-page-styles.css" rel="stylesheet" />
+<aside class="container" id="myAds">
+    <h3>My Ads</h3>
+    <ul>
+        <li>
+            All
+        </li>
+        <li>
+            Published
+        </li>
+        <li>
+            Waiting Approval
+        </li>
+        <li>
+            Inactive
+        </li>
+    </ul>
+</aside>
 
-        <img id="adImage" src="{{ad.imageDataUrl}}" />
+<div id="userAds-field">
+    <div ng-repeat="ad in userAds" class="userAd container">
+        <div id="adState">
+            <label for="adStatus">Status:</label>
+            <input type="text" name="adStatus" disabled="" value="{{ad.status}}" />
+            <button ng-hide="ad.status == 'Inactive'" class="button">Deactivate</button>
+        </div>
+        
+        <div id="adMain">
+            <h3 id="adTitle">{{ad.title}}</h3>
+            <span id="adDate">{{ad.date | date:'short'}}</span>
+            <textarea id="adText" disabled="">{{ad.text}}</textarea>
 
-        <div id="userInfo">
-            <div class="info-field">
-                <label for="ownerName">Name</label>
-                <input type="text" name="ownerName" disabled="" value="{{ad.ownerName}}" />
-            </div>
+            <img id="adImage" src="{{ad.imageDataUrl}}" />
 
-            <div class="info-field">
-                <label for="ownerEmail">Email:</label>
-                <input type="email" name="ownerEmail" disabled="" value="{{ad.ownerEmail}}" />
-            </div>
+            <div id="adInfo">
+                <div class="info-field">
+                    <label for="adCategory">Category</label>
+                    <input type="text" name="adCategory" disabled="" value="{{ad.categoryName}}" />
+                </div>
 
-            <div class="info-field">
-                <label for="ownerPhone">Tel.</label>
-                <input type="text" name="ownerPhone" disabled="" value="{{ad.ownerPhone}}" />
+                <div class="info-field">
+                    <label for="adTown">Town:</label>
+                    <input type="text" name="adTown" disabled="" value="{{ad.townName}}" />
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+    <!--<div id="myAds-field">
+        <div ng-repeat="userAd in userAds" class="ad container">
+            <div id="adState">
+                <label>Status:</label>
+                <input type="text" name="adStatus" disabled="" value="{{userAd.status}}" />
+                <button ng-hide="userAd.status == 'Inactive'"></button>
+            </div>
+
+            <div id="adMain">
+                <h3 id="adTitle">{{userAd.title}}</h3>
+                <span id="adDate">{{userAd.date | date:'short'}}</span>
+
+                <textarea id="adText" disabled="">{{userAd.text}}</textarea>
+
+                <img id="adImage" src="{{userAd.imageDataUrl}}" />
+
+                <div id="adInfo">
+                    <div class="info-field">
+                        <label for="adCategory">Category</label>
+                        <input type="text" name="adCategory" disabled="" value="{{userAd.categoryName}}" />
+                    </div>
+
+                    <div class="info-field">
+                        <label for="adTown">Town:</label>
+                        <input type="text" name="adTown" disabled="" value="{{userAd.townName}}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!--"title": "22222222222",
+                "text": "This is a new ad",
+                "date": "2014-12-27T08:53:15.0930000",
+                "imageDataUrl": null,
+                "categoryName": "Properties",
+                "townName": "Burgas",
+                "status": "Inactive"-->
