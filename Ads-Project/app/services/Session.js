@@ -9,10 +9,12 @@
         var create = function (user) {
             this.user = user;
             $rootScope.user = user;
+            sessionStorage.setItem('user', user);
         };
 
         var destroy = function() {
             this.user = null;
+            sessionStorage.removeItem('user');
             $rootScope.user = null;
         };
 

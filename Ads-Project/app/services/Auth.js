@@ -20,7 +20,7 @@
         }
 
         var isAuthenticated = function() {
-            return !!Session.user;
+            return !!sessionStorage.user;
         }
 
         var getUser = function() {

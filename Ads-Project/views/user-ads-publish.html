@@ -1,1 +1,47 @@
-﻿<h2>Publish New Ad</h2>
+﻿<link href="../styles/user-ads-publish-styles.css" rel="stylesheet" />
+<form id="publish-ad-form" class="container" ng-submit="">
+    <h3>Publish New Ad</h3>
+    
+    <img id="newAdImage"/>
+
+    <div class="input-field">
+        <label for="newAdTitle">Title:</label>
+        <input type="text" name="newAdTitle" ng-model="newAdTitle" />
+    </div>
+
+    <div class="input-field">
+        <label for="newAdText">Text:</label>
+        <textarea name="newAdText" ng-model="newAdText"></textarea>
+    </div>
+
+    <div class="input-field">
+        <label for="newAdImagePath">Image:</label>
+        <input type="text" name="newAdImagePath" />
+        <input type="file" name="newAdImage" />
+    </div>
+
+    <div class="input-field">
+        <label for="newAdCategory">Category:</label>
+        <select name="newAdCategory">
+            <option>Cars</option>
+            <option>asd</option>
+            <option>asd</option>
+            <option>asd</option>
+        </select>
+    </div>
+
+    <div class="input-field">
+        <label for="newAdTown">Town:</label>
+        <select id="newAdTown">
+            <option>Plovdiv</option>
+            <option>asd</option>
+            <option>asd</option>
+            <option>asd</option>
+        </select>
+    </div>
+
+    <div class="input-field">
+        <input class="button submit" type="submit" value="Publish" />
+        <a class="button" href="#/user/home">Cancel</a>
+    </div>
+</form>
