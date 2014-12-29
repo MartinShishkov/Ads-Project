@@ -1,7 +1,7 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var userAdsPublishController = function () {
+    var userAdsPublishController = function ($scope, DataQueryExecutor) {
         console.log("In user ads publish controller.");
 
         (function() {
@@ -26,6 +26,24 @@
                 reader.readAsDataURL(f);
             }
         }());
+
+        $scope.attemptPublish = function() {
+            var ad = {
+                title: $scope.newAdTitle,
+                text: $scope.newAdText,
+                imageDataUrl: $scope.newAdImage,
+                categoryid: Number($scope.newAdCategory),
+                townid: Number($scope.newAdTown)
+            }
+
+            DataQueryExecutor.publishAd(ad)
+                .then(function (res) {
+                console.log("Ad published successfully");
+                console.log(res);
+            },function(error) {
+                console.log(error);
+            });
+        }
 
     }
 

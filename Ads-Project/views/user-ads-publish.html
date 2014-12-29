@@ -1,12 +1,10 @@
 ﻿<link href="../styles/user-ads-publish-styles.css" rel="stylesheet" />
-<form id="publish-ad-form" class="container" ng-submit="">
+<form id="publish-ad-form" class="container" ng-submit="attemptPublish()">
     <h3>Publish New Ad</h3>
-    
+
     <div id="imagePreview">
         <img id="newAdImageThumbnail" />
-        <label for="newAdImagePath">Image:</label>
-        <input type="file" name="newAdImage" value="Browse" class="button"/>
-        
+        <input type="file" name="newAdImage" value="Browse" class="button" ng-model="newAdImage" />
     </div>
 
     <div class="input-field">
@@ -19,30 +17,35 @@
         <textarea name="newAdText" ng-model="newAdText"></textarea>
     </div>
 
-    
+    <div class="input-field">
+        <label for="newAdImagePath">Image:</label>
+        <input type="text" name="newAdImagePath" ng-model="newAdImagePath" />
+    </div>
 
     <div class="input-field">
         <label for="newAdCategory">Category:</label>
-        <select name="newAdCategory">
-            <option>Cars</option>
-            <option>asd</option>
-            <option>asd</option>
-            <option>asd</option>
+        <select name="newAdCategory" ng-model="newAdCategory">
+            <option value="1">Cars</option>
+            <option value ="2">asd</option>
+            <option value="3">asd</option>
+            <option value="4">asd</option>
         </select>
     </div>
 
     <div class="input-field">
-        <label for="newAdTown">Town:</label>
+        <label for="newAdTown" ng-model="newAdTown">Town:</label>
         <select id="newAdTown">
-            <option>Plovdiv</option>
-            <option>asd</option>
-            <option>asd</option>
-            <option>asd</option>
+            <option value="1">Plovdiv</option>
+            <option value="2">asd</option>
+            <option value="3">asd</option>
+            <option value="4">asd</option>
         </select>
     </div>
 
+
+
     <div class="input-field">
-        <input class="button submit" type="submit" value="Publish" />
+        <input class="button" type="submit" value="Publish" />
         <a class="button" href="#/user/home">Cancel</a>
     </div>
 </form>

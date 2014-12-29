@@ -1,29 +1,38 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var DataQueryExecutor = function ($http, rootUrl) {
+    var DataQueryExecutor = function ($http, rootUrl, Auth) {
+        function getHeaders() {
+            var headers = {
+                headers: {
+                    'Authorization': "Bearer " + Auth.getUser().access_token
+                }
+            }
+
+            return headers;
+        }
+
         var getAds = function(pageSize, startPage) {
             return $http.get(rootUrl + "ads?pagesize=" + pageSize + "&startpage=" + startPage);
         };
 
         var getCategories = function() {
             return $http.get(rootUrl + "categories");
-        }
+        };
 
         var getTowns = function() {
             return $http.get(rootUrl + "towns");
-        }
+        };
 
-        var getUserAds = function (accessToken) {
-            var headers = {
-                headers: {
-                    'Authorization': "Bearer " + accessToken
-                }
-            }
+        var getUserAds = function() {
+            return $http.get(rootUrl + "user/ads", getHeaders());
+        };
 
-            return $http.get(rootUrl + "user/ads", headers);
-        }
+        var publishAd = function (ad) {
+            return $http.post(rootUrl + "user/ads", ad, getHeaders());
+        };
 
+        
         // TODO: Implement further logic
         ////////////////////////////////
 
@@ -31,7 +40,8 @@
             getAds: getAds,
             getCategories: getCategories,
             getTowns: getTowns,
-            getUserAds: getUserAds
+            getUserAds: getUserAds,
+            publishAd: publishAd
         };
     }
 

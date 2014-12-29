@@ -4,7 +4,7 @@
     var userAdsController = function ($scope, $rootScope, DataQueryExecutor) {
         console.log("In user ads controller.");
 
-        DataQueryExecutor.getUserAds($rootScope.user.access_token)
+        DataQueryExecutor.getUserAds()
             .then(function(result) {
             loadUserAds(result);
         });

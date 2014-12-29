@@ -52,7 +52,8 @@
 
 #imagePreview input {
     display: block;
-    margin-top: 20px;
+    width: 110px;
+    float: right;
 }
 
 #publish-ad-form #imagePreview #newAdImageThumbnail {
@@ -60,7 +61,8 @@
     height: 220px;
     max-width: 200px;
     max-height: 220px;
-    float: right;
     border: 1px solid black;
     padding: 5px;
+    margin-bottom: 20px;
+    display: block;
 }
