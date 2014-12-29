@@ -2,7 +2,12 @@
 <form id="publish-ad-form" class="container" ng-submit="">
     <h3>Publish New Ad</h3>
     
-    <img id="newAdImage"/>
+    <div id="imagePreview">
+        <img id="newAdImageThumbnail" />
+        <label for="newAdImagePath">Image:</label>
+        <input type="file" name="newAdImage" value="Browse" class="button"/>
+        
+    </div>
 
     <div class="input-field">
         <label for="newAdTitle">Title:</label>
@@ -14,11 +19,7 @@
         <textarea name="newAdText" ng-model="newAdText"></textarea>
     </div>
 
-    <div class="input-field">
-        <label for="newAdImagePath">Image:</label>
-        <input type="text" name="newAdImagePath" />
-        <input type="file" name="newAdImage" />
-    </div>
+    
 
     <div class="input-field">
         <label for="newAdCategory">Category:</label>

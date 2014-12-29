@@ -1,6 +1,6 @@
 ﻿(function () {
     // defining the app with a dependency on ngRoute
-    var app = angular.module('AdsProject', ["ngRoute"]);
+    var app = angular.module('AdsProject', ["ngRoute", "ngCookies"]);
 
     // defining the root url for the services
     // to use across all controllers

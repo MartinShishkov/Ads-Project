@@ -1,25 +1,22 @@
 ﻿(function() {
     var module = angular.module('AdsProject');
 
-    var Session = function ($rootScope) {
+    var Session = function ($cookieStore) {
         // 'this' is the whole Session function
         // $rootScope.user is required because of the header
         // in the static part of the application
 
         var create = function (user) {
-            this.user = user;
-            $rootScope.user = user;
-            sessionStorage.setItem('user', user);
+            $cookieStore.put('user', user);
+            console.log($cookieStore.get('user'));
         };
 
         var destroy = function() {
-            this.user = null;
-            sessionStorage.removeItem('user');
-            $rootScope.user = null;
+            $cookieStore.remove('user');
         };
 
         var getUser = function() {
-            return this.user;
+            return $cookieStore.get('user');
         }
 
         return {
