@@ -16,6 +16,9 @@
             <label for="adStatus">Status:</label>
             <input type="text" name="adStatus" disabled="" value="{{ad.status}}" />
             <button ng-hide="ad.status == 'Inactive'" class="button" ng-click="deactivateAd(ad.id)">Deactivate</button>
+            <button ng-show="ad.status == 'Inactive'" class="button" ng-click="editAd(ad.id)">Edit</button>
+            <button ng-show="ad.status == 'Inactive'" class="button" ng-click="publishAgainAd(ad.id)">Publish Again</button>
+            <button ng-show="ad.status == 'Inactive'" class="button" ng-click="deleteAd(ad.id)">Delete</button>
         </div>
 
         <div id="adMain">

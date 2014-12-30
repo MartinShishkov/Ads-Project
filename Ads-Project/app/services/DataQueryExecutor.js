@@ -36,6 +36,18 @@
             return $http.put(rootUrl + "user/ads/deactivate/" + id.toString(), null, getHeaders());
         }
 
+        var publishAgain = function(id) {
+            return $http.put(rootUrl + "user/ads/publishagain/" + id.toString(), null, getHeaders());
+        }
+
+        var editAd = function(id, newAd) {
+            return $http.put(rootUrl + "user/ads/" + id.toString(), newAd, getHeaders());
+        }
+
+        var deleteAd = function(id) {
+            return $http.delete(rootUrl + "user/ads/" + id.toString(), getHeaders());
+        }
+
         // TODO: Implement further logic
         ////////////////////////////////
 
@@ -46,7 +58,10 @@
             getUserAds: getUserAds,
             publishAd: publishAd,
             getCategories: getCategories,
-            deactivateAd: deactivateAd
+            deactivateAd: deactivateAd,
+            publishAgain: publishAgain,
+            editAd: editAd,
+            deleteAd: deleteAd
         };
     }
 

@@ -32,17 +32,33 @@
 
         function loadUserAds(result) {
             $scope.userAds = result.data.ads;
-            console.log($scope.userAds);
+        }
+
+        function updateAds() {
+            DataQueryExecutor.getUserAds()
+            .then(function (result) {
+                loadUserAds(result);
+            });
         }
 
         $scope.deactivateAd = function(id) {
             DataQueryExecutor.deactivateAd(id)
                 .then(function (result) {
-                MessageProvider.success("Ad deactivated successfully.");
+                    MessageProvider.success("Ad deactivated successfully.");
+                    updateAds();
             }, function(error) {
                 MessageProvider.error(error.data.message);
             });
+        }
 
+        $scope.publishAgainAd = function(id) {
+            DataQueryExecutor.publishAgain(id)
+                .then(function(result) {
+                    MessageProvider.success("Ad published again successfully.");
+                    updateAds();
+            }, function(error) {
+                MessageProvider.error(error.data.message);
+            });
         }
 
         $scope.isActiveFilter = function (filterTitle) {
@@ -50,7 +66,6 @@
         }
 
         $scope.filterAdsBy = function (filter) {
-            console.log(filter);
             $scope.activeAdFilter = filter;
         }
 

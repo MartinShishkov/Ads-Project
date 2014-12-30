@@ -148,7 +148,6 @@
     float: right;
     padding-left: 20px;
     border-left: 1px solid rgb(95, 157, 64);
-    height: 150px;
 }
 
 .userAd #adState label{
@@ -162,4 +161,12 @@
     background-color: rgb(197, 224, 180);
     border: 1px dashed rgb(95, 157, 64);
     padding-left: 10px;
+}
+
+.userAd #adState button{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
