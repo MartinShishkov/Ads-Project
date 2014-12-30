@@ -23,7 +23,12 @@
     margin: 5px;
 }
 
-#myAds ul li a {
-    color: black;
-    text-decoration: none;
+#myAds ul li:hover {
+    background-color: rgb(68, 137, 68);
+}
+
+#myAds ul .activeFilter {
+    background-color: #f8c032;
+    border: 1px solid #805f0b;
+    color: #ffffff;
 }

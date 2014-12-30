@@ -2,29 +2,22 @@
 <aside class="container" id="myAds">
     <h3>My Ads</h3>
     <ul>
-        <li>
-            All
-        </li>
-        <li>
-            Published
-        </li>
-        <li>
-            Waiting Approval
-        </li>
-        <li>
-            Inactive
+        <li ng-repeat="filter in adsFilters"
+            ng-class="{activeFilter:isActiveFilter(filter.title)}"
+            ng-click="filterAdsBy(filter)">
+            {{filter.title}}
         </li>
     </ul>
 </aside>
 
 <div id="userAds-field">
-    <div ng-repeat="ad in userAds" class="userAd container">
+    <div ng-repeat="ad in userAds | filter:{status: activeAdFilter.filter}" class="userAd container">
         <div id="adState">
             <label for="adStatus">Status:</label>
             <input type="text" name="adStatus" disabled="" value="{{ad.status}}" />
             <button ng-hide="ad.status == 'Inactive'" class="button" ng-click="deactivateAd(ad.id)">Deactivate</button>
         </div>
-        
+
         <div id="adMain">
             <h3 id="adTitle">{{ad.title}}</h3>
             <span id="adDate">{{ad.date | date:'short'}}</span>

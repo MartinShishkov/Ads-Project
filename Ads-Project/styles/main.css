@@ -18,14 +18,14 @@ header {
     text-align: center;
     background-color: rgb(169, 209, 142);
     padding: 15px 0px 15px 0px !important;
-    width: 99%;
+    width: 99.8%;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 footer {
     bottom:0;
-    width: 99%;
+    width: 99.8%;
     margin: 0px auto;
     text-align: center;
     background-color: rgb(169, 209, 142);
