@@ -18,27 +18,20 @@
     </div>
 
     <div class="input-field">
-        <label for="newAdImagePath">Image:</label>
-        <input type="text" name="newAdImagePath" ng-model="newAdImagePath" />
-    </div>
-
-    <div class="input-field">
         <label for="newAdCategory">Category:</label>
         <select name="newAdCategory" ng-model="newAdCategory">
-            <option value="1">Cars</option>
-            <option value ="2">asd</option>
-            <option value="3">asd</option>
-            <option value="4">asd</option>
+            <option ng-repeat="category in categories track by $index" value="{{category.id}}">
+                {{category.name}}
+            </option>
         </select>
     </div>
 
     <div class="input-field">
         <label for="newAdTown" ng-model="newAdTown">Town:</label>
-        <select id="newAdTown">
-            <option value="1">Plovdiv</option>
-            <option value="2">asd</option>
-            <option value="3">asd</option>
-            <option value="4">asd</option>
+        <select name="newAdTown" ng-model="newAdTown">
+            <option ng-repeat="town in towns track by $index" value="{{town.id}}">
+                {{town.name}}
+            </option>
         </select>
     </div>
 

@@ -27,6 +27,16 @@
             }
         }());
 
+        DataQueryExecutor.getCategories()
+            .then(function (result) {
+            $scope.categories = result.data;
+        });
+
+        DataQueryExecutor.getTowns()
+            .then(function (result) {
+                $scope.towns = result.data;
+            });
+
         $scope.attemptPublish = function() {
             var ad = {
                 title: $scope.newAdTitle,

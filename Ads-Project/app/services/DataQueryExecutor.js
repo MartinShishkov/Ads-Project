@@ -32,7 +32,13 @@
             return $http.post(rootUrl + "user/ads", ad, getHeaders());
         };
 
+        var getCategories = function() {
+            return $http.get(rootUrl + "categories");
+        }
         
+        var getTowns = function () {
+            return $http.get(rootUrl + "towns");
+        }
         // TODO: Implement further logic
         ////////////////////////////////
 
@@ -41,7 +47,8 @@
             getCategories: getCategories,
             getTowns: getTowns,
             getUserAds: getUserAds,
-            publishAd: publishAd
+            publishAd: publishAd,
+            getCategories: getCategories
         };
     }
 

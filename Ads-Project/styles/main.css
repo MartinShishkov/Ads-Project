@@ -1,8 +1,16 @@
-﻿body {
+﻿html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
     margin: 0px;
     background-color: rgb(226, 240, 217);
     font-family: "PT Sans", Tahoma, sans-serif;
+    height: 100%;
+    width: 100%;
 }
+
 header {
     position: relative;
     margin: 0px auto; 
@@ -10,19 +18,34 @@ header {
     text-align: center;
     background-color: rgb(169, 209, 142);
     padding: 15px;
+    width: 100%;
 }
 
 footer {
-    position: fixed;
     bottom:0;
     width: 100%;
     margin: 0px auto;
     text-align: center;
     background-color: rgb(169, 209, 142);
     padding: 15px;
+    margin-top: 20px;
+}
+
+footer, #wrapper:after {
+    height: 20px;
 }
 
 header h2 {
     margin: 0 auto;
     width: 500px;
+}
+
+#wrapper {
+    min-height: 100%;
+    overflow: auto;
+}
+
+#wrapper:after {
+    content: "";
+    display: block;
 }
