@@ -1,7 +1,7 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var registerController = function ($scope, UserQueryExecutor, Auth) {
+    var registerController = function ($scope, UserQueryExecutor, Auth, MessageProvider) {
 
         $scope.attemptRegister = function() {
             var user = {
@@ -16,9 +16,9 @@
 
             UserQueryExecutor.registerUser(user)
                 .then(function () {
-                console.log("User account created.");
+                MessageProvider.success("User account created. Please login.");
             }, function(error) {
-                console.log(error);
+                MessageProvider.error(error.data.message);
             });
         }
 

@@ -69,6 +69,7 @@
     <Content Include="app\controllers\UserAdsPublishController.js" />
     <Content Include="app\services\Auth.js" />
     <Content Include="app\services\DataQueryExecutor.js" />
+    <Content Include="app\services\MessageProvider.js" />
     <Content Include="app\services\Session.js" />
     <Content Include="app\services\UserQueryExecutor.js" />
     <Content Include="index.html" />
@@ -76,6 +77,7 @@
     <Content Include="libs\angular-route.js" />
     <Content Include="libs\angular.js" />
     <Content Include="libs\jquery.js" />
+    <Content Include="libs\jquery.noty.packaged.min.js" />
     <Content Include="styles\ads.css" />
     <Content Include="styles\buttons.css" />
     <Content Include="styles\containers.css" />

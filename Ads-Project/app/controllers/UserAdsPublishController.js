@@ -1,7 +1,7 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var userAdsPublishController = function ($scope, DataQueryExecutor) {
+    var userAdsPublishController = function ($scope, DataQueryExecutor, MessageProvider) {
         console.log("In user ads publish controller.");
 
         (function() {
@@ -38,9 +38,10 @@
 
             DataQueryExecutor.publishAd(ad)
                 .then(function (res) {
-                console.log("Ad published successfully");
+                MessageProvider.success("Advertisement submitted for approval. Once approved, it will be published.");
                 console.log(res);
-            },function(error) {
+                }, function (error) {
+                MessageProvider.error(error.data.message);
                 console.log(error);
             });
         }
