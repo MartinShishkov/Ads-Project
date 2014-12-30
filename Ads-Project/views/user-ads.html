@@ -22,7 +22,7 @@
         <div id="adState">
             <label for="adStatus">Status:</label>
             <input type="text" name="adStatus" disabled="" value="{{ad.status}}" />
-            <button ng-hide="ad.status == 'Inactive'" class="button">Deactivate</button>
+            <button ng-hide="ad.status == 'Inactive'" class="button" ng-click="deactivateAd(ad.id)">Deactivate</button>
         </div>
         
         <div id="adMain">

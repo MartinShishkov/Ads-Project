@@ -32,13 +32,10 @@
             return $http.post(rootUrl + "user/ads", ad, getHeaders());
         };
 
-        var getCategories = function() {
-            return $http.get(rootUrl + "categories");
+        var deactivateAd = function(id) {
+            return $http.put(rootUrl + "user/ads/deactivate/" + id.toString(), null, getHeaders());
         }
-        
-        var getTowns = function () {
-            return $http.get(rootUrl + "towns");
-        }
+
         // TODO: Implement further logic
         ////////////////////////////////
 
@@ -48,7 +45,8 @@
             getTowns: getTowns,
             getUserAds: getUserAds,
             publishAd: publishAd,
-            getCategories: getCategories
+            getCategories: getCategories,
+            deactivateAd: deactivateAd
         };
     }
 
