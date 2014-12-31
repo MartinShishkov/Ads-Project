@@ -6,7 +6,7 @@
 
         (function() {
             if (window.FileReader) {
-                var fileInput = document.getElementsByName('newAdImage')[0];
+                var fileInput = document.getElementsByName('photo')[0];
                 fileInput.addEventListener('change', handleFileSelect, false);
             }
 
@@ -20,6 +20,7 @@
                         var imgElement = document.getElementById('newAdImageThumbnail');
 
                         imgElement.setAttribute('src', e.target.result);
+                        $scope.photo = e.target.result;
                     }
                 })(f);
 
@@ -37,14 +38,16 @@
                 $scope.towns = result.data;
             });
 
-        $scope.attemptPublish = function() {
+        $scope.attemptPublish = function () {
             var ad = {
                 title: $scope.newAdTitle,
                 text: $scope.newAdText,
-                imageDataUrl: $scope.newAdImage,
+                imageDataUrl: $scope.photo,
                 categoryid: Number($scope.newAdCategory),
                 townid: Number($scope.newAdTown)
             }
+
+            console.log(ad);
 
             DataQueryExecutor.publishAd(ad)
                 .then(function (res) {
