@@ -7,6 +7,10 @@
 
         // logout functionality for the button
         $scope.logout = Auth.logout;
+        $scope.isUserAdministrator = function () {
+            console.log($rootScope.isUserAdministrator);
+            return $rootScope.isUserAdministrator;
+        };
         $rootScope.user = Auth.getUser();
 
         $rootScope.$on('$routeChangeSuccess', function() {

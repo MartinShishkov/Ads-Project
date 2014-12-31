@@ -2,7 +2,7 @@
     // a reference to the application
     var module = angular.module('AdsProject');
 
-    var homeController = function($scope, DataQueryExecutor) {
+    var homeController = function ($scope, DataQueryExecutor) {
         var pageSize = 2;
         //var pageSize = 1;
         var startPage = 1;

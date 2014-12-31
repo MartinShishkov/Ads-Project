@@ -9,7 +9,7 @@
         <link href="styles/pagination.css" rel="stylesheet" />
     </head>
     <body>
-        <header class="container" ng-controller="headerController">
+        <header class="container"ng-controller="headerController">
             <div ng-show="user" id="user-panel">
                 <span ng-cloak="">{{user.username}}</span>
                 <a href="/" ng-click="logout()" ng-cloak="">Logout</a>
@@ -71,6 +71,7 @@
         <script src="app/controllers/NavigationController.js"></script>
         <script src="app/controllers/UserAdsController.js"></script>
         <script src="app/controllers/UserAdsPublishController.js"></script>
-        <script src="app/controllers/deleteAdController.js"></script>
+        <script src="app/controllers/DeleteAdController.js"></script>
+        <script src="app/controllers/Admin/AdminHomeController.js"></script>
     </body>
 </html>

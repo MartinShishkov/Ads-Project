@@ -23,15 +23,24 @@
             return !!Session.getUser();
         }
 
-        var getUser = function() {
+        var getUser = function () {
             return Session.getUser();
+        }
+
+        var isAdmin = function () {
+            if (Session.getUser()) {
+                return !!Boolean(Session.getUser().isAdmin);
+            }
+
+            return false;
         }
 
         return {
             login: login,
             logout: logout,
             isAuthenticated: isAuthenticated,
-            getUser: getUser
+            getUser: getUser,
+            isAdmin: isAdmin
         };
     }
 

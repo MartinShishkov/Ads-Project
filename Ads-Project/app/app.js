@@ -23,7 +23,9 @@
             .when('/user/home', {
                 templateUrl: "./views/main.html",
                 controller: "homeController",
-                resolve: { loginRequired: loginRequired }
+                resolve: {
+                    loginRequired: loginRequired,
+                }
             })
             .when('/user/ads', {
                 templateUrl: "./views/user-ads.html",
@@ -45,6 +47,11 @@
                 controller: "deleteAdController",
                 resolve: { loginRequired: loginRequired }
             })
+            .when('/admin/home', {
+                templateUrl: "./views/Admin/admin-home.html",
+                controller: "adminHomeController",
+                resolve: { adminRequired: adminRequired }
+            })
             .otherwise({redirectTo: "/"});
     });
 
@@ -55,6 +62,21 @@
             deferred.reject();
             $location.path('/login');
         }
+    }
+
+    var adminRequired = function ($location, $q, Auth) {
+        loginRequired($location, $q, Auth);
+
+        var deferred = $q.defer();
+
+        if (Auth.isAdmin() == false) {
+            deferred.reject();
+            $location.path('/user/home');
+        }
+    }
+
+    var isAdmin = function(Auth) {
+        return Auth.isAdmin();
     }
 
 }());
