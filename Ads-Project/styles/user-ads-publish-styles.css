@@ -1,7 +1,4 @@
-﻿body {
-}
-
-#publish-ad-form {
+﻿#publish-ad-form {
     float: left;
     width: 600px;
     border-radius: 20px;
@@ -29,9 +26,6 @@
 #publish-ad-form .input-field input:not([type=submit]), select {
     width: 75%;
     height: 30px;
-}
-
-#publish-ad-form .input-field label {
 }
 
 #publish-ad-form .input-field textarea{

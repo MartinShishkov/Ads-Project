@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\deleteAdController.js" />
     <Content Include="app\controllers\EditUserController.js" />
     <Content Include="app\controllers\HeaderController.js" />
     <Content Include="app\controllers\HomeController.js" />
@@ -81,10 +82,12 @@
     <Content Include="styles\ads.css" />
     <Content Include="styles\buttons.css" />
     <Content Include="styles\containers.css" />
+    <Content Include="styles\delete-ad.css" />
     <Content Include="styles\main.css" />
     <Content Include="styles\pagination.css" />
     <Content Include="styles\user-ads-page-styles.css" />
     <Content Include="styles\user-ads-publish-styles.css" />
+    <Content Include="views\delete-ad.html" />
     <Content Include="views\edit-user-profile.html" />
     <Content Include="views\login.html" />
     <Content Include="views\main.html" />

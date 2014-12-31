@@ -1,7 +1,7 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var userAdsController = function ($scope, $rootScope, DataQueryExecutor, MessageProvider) {
+    var userAdsController = function($scope, $rootScope, $location, DataQueryExecutor, MessageProvider) {
         console.log("In user ads controller.");
 
         $scope.adsFilters = [
@@ -25,10 +25,7 @@
 
         $scope.activeAdFilter = $scope.adsFilters[0];
 
-        DataQueryExecutor.getUserAds()
-            .then(function(result) {
-            loadUserAds(result);
-        });
+        updateAds();
 
         function loadUserAds(result) {
             $scope.userAds = result.data.ads;
@@ -39,6 +36,10 @@
             .then(function (result) {
                 loadUserAds(result);
             });
+        }
+
+        $scope.goToDeleteAd = function (id) {
+            $location.path('/user/ads/delete/' + id);
         }
 
         $scope.deactivateAd = function(id) {

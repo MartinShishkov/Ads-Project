@@ -1,14 +1,13 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var headerController = function ($scope, $rootScope, $location, Auth) {
+    var headerController = function ($scope, $rootScope, $location, $routeParams, Auth) {
         // gets the user from the $rootScope
         // and displays his name in the header
 
         // logout functionality for the button
         $scope.logout = Auth.logout;
         $rootScope.user = Auth.getUser();
-        //$rootScope.user = Auth.getUser();
 
         $rootScope.$on('$routeChangeSuccess', function() {
             switch ($location.path()) {
@@ -32,6 +31,9 @@
                     break;
                 case '/user/profile':
                     $scope.currentPage = "Edit User Profile";
+                    break;
+                case '/user/ads/delete/' + $routeParams.adId:
+                    $scope.currentPage = "Delete Ad";
                     break;
                 default:
                     break;

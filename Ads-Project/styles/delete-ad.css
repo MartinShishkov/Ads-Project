@@ -1,0 +1,86 @@
+﻿body {
+}
+
+#deleteAd-field {
+    float: left;
+    width: 500px;
+}
+
+#deleteAd-field #adMain {
+    width: 100%;
+    float: right;
+}
+
+#deleteAd-field h2 {
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+#deleteAd-field #adTitle {
+    float: left;
+    margin: 5px;
+    display: block;
+    margin-right: 30px;
+    width: 300px;
+    word-wrap: break-word;
+}
+
+#deleteAd-field #adDate {
+    float: right;
+}
+
+#deleteAd-field #adText {
+    width: 300px;
+    resize: none;
+    height: 100px;
+    display: block;
+    clear: both;
+    float: right;
+}
+
+#deleteAd-field #adInfo {
+    float: right;
+    display: block;
+    clear: both;
+    width: 300px;
+}
+
+#deleteAd-field #adInfo .info-field input {
+    display: inline-block;
+    width: 200px;
+    float: right;
+    height: 25px;
+    background-color: rgb(197, 224, 180);
+    border: 1px dashed rgb(95, 157, 64);
+    padding-left: 10px;
+}
+
+#deleteAd-field #adInfo label {
+    display: inline-block;
+}
+
+#deleteAd-field #adInfo .info-field {
+    margin: 20px;
+    margin-right: 0px;
+    display: block;
+}
+
+#deleteAd-field #adImage {
+    float: left;
+    display: block;
+    max-width: 170px;
+    height: 100px;
+}
+
+#deleteAd-field .input-field {
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin-top: 20px;
+}
+
+#deleteAd-field .input-field .button {
+    font-size: 12pt;
+}

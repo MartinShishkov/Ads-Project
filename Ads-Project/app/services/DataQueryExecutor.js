@@ -48,6 +48,10 @@
             return $http.delete(rootUrl + "user/ads/" + id.toString(), getHeaders());
         }
 
+        var getAdById = function(id) {
+            return $http.get(rootUrl + "user/ads/" + id.toString(), getHeaders());
+        }
+
         // TODO: Implement further logic
         ////////////////////////////////
 
@@ -61,7 +65,8 @@
             deactivateAd: deactivateAd,
             publishAgain: publishAgain,
             editAd: editAd,
-            deleteAd: deleteAd
+            deleteAd: deleteAd,
+            getAdById: getAdById
         };
     }
 

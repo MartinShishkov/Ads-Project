@@ -40,6 +40,11 @@
                 controller: "editUserController",
                 resolve: { loginRequired: loginRequired }
             })
+            .when('/user/ads/delete/:adId', {
+                templateUrl: "./views/delete-ad.html",
+                controller: "deleteAdController",
+                resolve: { loginRequired: loginRequired }
+            })
             .otherwise({redirectTo: "/"});
     });
 

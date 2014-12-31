@@ -1,0 +1,28 @@
+﻿<link href="../styles/delete-ad.css" rel="stylesheet" />
+<div class="container" id="deleteAd-field" ng-model="ad">
+    <h2>Confirm Deleting Ad?</h2>
+    <div id="adMain">
+        <h3 id="adTitle">{{ad.title}}</h3>
+        <span id="adDate">{{ad.date | date:'short'}}</span>
+        <textarea id="adText" disabled="">{{ad.text}}</textarea>
+
+        <img id="adImage" src="{{ad.imageDataUrl}}" />
+
+        <div id="adInfo">
+            <div class="info-field">
+                <label for="adCategory">Category</label>
+                <input type="text" name="adCategory" disabled="" value="{{ad.categoryName}}" />
+            </div>
+
+            <div class="info-field">
+                <label for="adTown">Town:</label>
+                <input type="text" name="adTown" disabled="" value="{{ad.townName}}" />
+            </div>
+        </div>
+
+    </div>
+    <div class="input-field">
+        <button class="button" ng-click="deleteAd(ad.id)">Delete</button>
+        <a class="button" href="#/user/ads">Cancel</a>
+    </div>
+</div>
