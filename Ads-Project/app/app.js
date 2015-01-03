@@ -23,9 +23,7 @@
             .when('/user/home', {
                 templateUrl: "./views/main.html",
                 controller: "homeController",
-                resolve: {
-                    loginRequired: loginRequired,
-                }
+                resolve: { loginRequired: loginRequired }
             })
             .when('/user/ads', {
                 templateUrl: "./views/user-ads.html",

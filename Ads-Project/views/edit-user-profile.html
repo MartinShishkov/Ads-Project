@@ -1,1 +1,33 @@
-﻿<h2>Edit profile</h2>
+﻿<link href="../styles/user-edit-styles.css" rel="stylesheet" />
+<form id="edit-profile-form" class="container" ng-submit="attemptAccountUpdate()">
+    <h2>Edit Profile</h2>
+
+    <div class="input-field">
+        <label for="userName">Name:</label>
+        <input type="text" name="userName" ng-model="user.name" />
+    </div>
+    
+    <div class="input-field">
+        <label for="userEmail">Email:</label>
+        <input type="email" name="userEmail" ng-model="user.email" />
+    </div>
+    
+    <div class="input-field">
+        <label for="userPhone">Phone:</label>
+        <input type="text" name="userPhone" ng-model="user.phoneNumber" />
+    </div>
+    
+    <div class="input-field">
+        <label for="userTown">Town:</label>
+        <select name="userTown" ng-model="user.townId">
+            <option ng-repeat="town in towns track by $index" value="{{town.id}}">
+                {{town.name}}
+            </option>
+        </select>
+    </div>
+    
+    <div class="input-field">
+        <button class="button" type="submit">Update</button>
+        <button class="button" ng-click="cancel()">Cancel</button>
+    </div>
+</form>

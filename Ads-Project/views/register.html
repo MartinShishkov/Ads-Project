@@ -20,9 +20,10 @@
     <input name="registerEmail" type="email" ng-model="registerEmail" />
 
     <label for="registerTown">Town:</label>
-    <select name="registerTown">
-        <option>Town1</option>
-        <option>Town2</option>
+    <select name="registerTown" ng-model="registerTown">
+        <option ng-repeat="town in towns track by $index" value="{{town.id}}">
+            {{town.name}}
+        </option>
     </select>
 
     <input type="submit" value="Register" class="button"/>
