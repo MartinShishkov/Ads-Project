@@ -3,9 +3,9 @@
     <h3>Edit Ad</h3>
 
     <div id="imagePreview">
-        <img id="newAdImageThumbnail" ng-src="{{ad.imageDataUrl}}"/>
+        <img id="newAdImageThumbnail" src="{{ad.imageDataUrl}}"/>
         <input type="file" name="photo" class="button" ng-model="photo" />
-        <button class="button" ng-click="deleteImage()">Delete image</button>
+        <button class="button" type="button" ng-click="deleteImage()">Delete image</button>
     </div>
 
     <div class="input-field">
@@ -38,6 +38,6 @@
 
     <div class="input-field">
         <button class="button" type="submit">Edit</button>
-        <button class="button" ng-click="cancel()">Cancel</button>
+        <button class="button" type="button" ng-click="cancel()">Cancel</button>
     </div>
 </form>

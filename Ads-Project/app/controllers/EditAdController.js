@@ -17,6 +17,7 @@
         DataQueryExecutor.getAdById(Number($routeParams.adId))
             .then(function (result) {
                 $scope.ad = result.data;
+                $scope.photo = $scope.ad.imageDataUrl;
                 //$scope.ad.changeimage = false;
         }, function (error) {
                 console.log(error);
@@ -48,8 +49,11 @@
         }());
 
         $scope.deleteImage = function () {
-            $scope.photo = null;
-            $scope.ad.changeimage = false;
+            $scope.photo = "";
+            $scope.ad.imageDataUrl = "";
+            $scope.ad.changeimage = true;
+
+            console.log("adadsa");
         }
 
         $scope.cancel = function() {
@@ -66,8 +70,8 @@
                 townid: $scope.ad.townId
             }
 
-            DataQueryExecutor.editAd($routeParams.adId, newAd).then(function(result) {
-                console.log(result);
+            DataQueryExecutor.editAd($routeParams.adId, newAd).then(function (result) {
+                console.log("submitted");
                 $location.path('/user/ads');
             }, function(error) {
                 console.log(error);
