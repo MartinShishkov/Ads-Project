@@ -39,6 +39,9 @@
                 case '/user/ads/delete/' + $routeParams.adId:
                     $scope.currentPage = "Delete Ad";
                     break;
+                case '/user/ads/edit/' + $routeParams.adId:
+                    $scope.currentPage = "Edit Ad";
+                    break;
                 default:
                     break;
             }

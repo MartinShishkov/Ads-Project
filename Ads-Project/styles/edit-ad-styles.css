@@ -1,0 +1,73 @@
+﻿#edit-ad-form {
+    float: left;
+    width: 600px;
+    border-radius: 15px;
+}
+
+#edit-ad-form .input-field {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.text {
+    width: 300px;
+}
+
+#edit-ad-form .input-field label, input:not([type=submit]), textarea, select {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+#edit-ad-form .input-field input:not([type=submit]), textarea, select {
+    border: 1px solid rgb(95, 157, 64);
+}
+
+#edit-ad-form .input-field input:not([type=submit]), select {
+    width: 75%;
+    height: 30px;
+}
+
+#edit-ad-form .input-field textarea{
+    height: 100px;
+    width: 50%;
+    resize: none;
+}
+
+#edit-ad-form h3 {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+#imagePreview {
+    float: right;
+}
+
+#imagePreview input {
+    display: block;
+    width: 110px;
+    float: right;
+}
+
+#edit-ad-form #imagePreview #newAdImageThumbnail {
+    width: 200px;
+    height: 220px;
+    max-width: 200px;
+    max-height: 220px;
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#edit-ad-form #imagePreview .button {
+    display: block;
+    float: right;
+    margin-left: 15px;
+}
+
+#edit-ad-form .input-field .button {
+    font-size: 12pt;
+}
+

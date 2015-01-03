@@ -61,6 +61,7 @@
     <Content Include="app\app.js" />
     <Content Include="app\controllers\Admin\AdminHomeController.js" />
     <Content Include="app\controllers\DeleteAdController.js" />
+    <Content Include="app\controllers\EditAdController.js" />
     <Content Include="app\controllers\EditUserController.js" />
     <Content Include="app\controllers\HeaderController.js" />
     <Content Include="app\controllers\HomeController.js" />
@@ -84,6 +85,7 @@
     <Content Include="styles\buttons.css" />
     <Content Include="styles\containers.css" />
     <Content Include="styles\delete-ad.css" />
+    <Content Include="styles\edit-ad-styles.css" />
     <Content Include="styles\main.css" />
     <Content Include="styles\pagination.css" />
     <Content Include="styles\user-ads-page-styles.css" />
@@ -91,6 +93,7 @@
     <Content Include="styles\user-edit-styles.css" />
     <Content Include="views\Admin\admin-home.html" />
     <Content Include="views\delete-ad.html" />
+    <Content Include="views\edit-ad.html" />
     <Content Include="views\edit-user-profile.html" />
     <Content Include="views\login.html" />
     <Content Include="views\main.html" />

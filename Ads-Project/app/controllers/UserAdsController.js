@@ -70,6 +70,9 @@
             $scope.activeAdFilter = filter;
         }
 
+        $scope.editAd = function(adId) {
+            $location.path("/user/ads/edit/" + adId);
+        }
 
     }
 

@@ -45,6 +45,11 @@
                 controller: "deleteAdController",
                 resolve: { loginRequired: loginRequired }
             })
+            .when('/user/ads/edit/:adId', {
+                templateUrl: "./views/edit-ad.html",
+                controller: "editAdController",
+                resolve: { loginRequired: loginRequired }
+            })
             .when('/admin/home', {
                 templateUrl: "./views/Admin/admin-home.html",
                 controller: "adminHomeController",

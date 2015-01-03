@@ -22,7 +22,6 @@
             }
 
             UserQueryExecutor.editUserProfile(newUser).then(function(result) {
-                console.log(result);
                 MessageProvider.success(result.data.message);
             }, function(error) {
                 MessageProvider.error(error.message);
@@ -37,7 +36,6 @@
             };
 
             UserQueryExecutor.changePassword(passwordInfo).then(function (result) {
-                console.log(result);
                 MessageProvider.success(result.data.message);
             }, function (error) {
                 MessageProvider.error(error.message);

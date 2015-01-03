@@ -1,0 +1,43 @@
+﻿<link href="../styles/edit-ad-styles.css" rel="stylesheet" />
+<form id="edit-ad-form" class="container" ng-submit="attemptAdUpdate()">
+    <h3>Edit Ad</h3>
+
+    <div id="imagePreview">
+        <img id="newAdImageThumbnail" ng-src="{{ad.imageDataUrl}}"/>
+        <input type="file" name="photo" class="button" ng-model="photo" />
+        <button class="button" ng-click="deleteImage()">Delete image</button>
+    </div>
+
+    <div class="input-field">
+        <label for="newAdTitle">Title:</label>
+        <input type="text" name="newAdTitle" ng-model="ad.title" />
+    </div>
+
+    <div class="input-field">
+        <label for="newAdText">Text:</label>
+        <textarea name="newAdText" ng-model="ad.text"></textarea>
+    </div>
+
+    <div class="input-field">
+        <label for="newAdCategory">Category:</label>
+        <select name="newAdCategory" ng-model="ad.categoryId">
+            <option ng-repeat="category in categories track by $index" value="{{category.id}}">
+                {{category.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="input-field">
+        <label for="newAdTown">Town:</label>
+        <select name="newAdTown" ng-model="ad.townId">
+            <option ng-repeat="town in towns track by $index" value="{{town.id}}">
+                {{town.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="input-field">
+        <button class="button" type="submit">Edit</button>
+        <button class="button" ng-click="cancel()">Cancel</button>
+    </div>
+</form>
