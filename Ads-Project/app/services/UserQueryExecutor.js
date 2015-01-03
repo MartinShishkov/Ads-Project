@@ -24,10 +24,15 @@
             return $http.put(rootUrl + 'user/profile', newUser, getHeaders());
         }
 
+        var changePassword = function(passwordInfo) {
+            return $http.put(rootUrl + 'user/changepassword', passwordInfo, getHeaders());
+        }
+
         return {
             registerUser: registerUser,
             getUserProfile: getUserProfile,
-            editUserProfile: editUserProfile
+            editUserProfile: editUserProfile,
+            changePassword: changePassword
         };
     }
 

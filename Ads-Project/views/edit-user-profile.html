@@ -31,3 +31,27 @@
         <button class="button" ng-click="cancel()">Cancel</button>
     </div>
 </form>
+
+<form id="edit-profile-form" class="container" ng-submit="attemptPasswordChange()">
+    <h2>Change Password</h2>
+
+    <div class="input-field">
+        <label for="userOldPass">Old password:</label>
+        <input type="password" name="userOldPass" ng-model="user.oldPass" />
+    </div>
+
+    <div class="input-field">
+        <label for="userNewPass">New password:</label>
+        <input type="password" name="userNewPass" ng-model="user.newPass" />
+    </div>
+
+    <div class="input-field">
+        <label for="userNewPassConfirm">Confirm new password:</label>
+        <input type="password" name="userNewPassConfirm" ng-model="user.newPassConfirm" />
+    </div>
+
+    <div class="input-field">
+        <button class="button" type="submit">Change Password</button>
+        <button class="button" ng-click="cancel()">Cancel</button>
+    </div>
+</form>
