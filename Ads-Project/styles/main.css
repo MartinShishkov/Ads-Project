@@ -43,6 +43,11 @@ header h2 {
     width: 500px;
 }
 
+.adminHeader {
+    background-color: rgb(255, 211, 64) !important;
+
+}
+
 #wrapper {
     min-height: 100%;
     overflow: auto;

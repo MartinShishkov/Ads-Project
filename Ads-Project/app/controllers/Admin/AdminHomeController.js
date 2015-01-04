@@ -1,7 +1,7 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var adminHomeController = function ($scope, AdminDataQueryExecutor) {
+    var adminHomeController = function ($scope, AdminDataQueryExecutor, MessageProvider) {
         console.log("In admin home controller");
 
         var pageSize = 1;
@@ -24,7 +24,6 @@
                                         return obj != undefined;
                                     });
         };
-
 
         //////////////////////////////////
         function loadPages(numPages) {
@@ -76,6 +75,19 @@
                 $scope.activePage++;
                 $scope.goToPage($scope.activePage);
             }
+        }
+
+
+        //////////////////////////////////
+        $scope.approveAd = function (id) {
+            AdminDataQueryExecutor.approveAd(id).then(function(result) {
+                $scope.goToFirstPage();
+                MessageProvider.success(result.data.message);
+            }, function(error) {
+                MessageProvider.error(error.data.message);
+            });
+
+            console.log(id);
         }
     }
 

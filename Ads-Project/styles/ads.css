@@ -170,3 +170,23 @@
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
+#admin-ad-buttons {
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid black;
+}
+
+#admin-ad-buttons button {
+    margin-left: 10px;
+    font-size: 12pt;
+}
+
+#admin-ad-buttons input {
+    height: 25px;
+    font-size: 12pt;
+    text-align: center;
+    border: 1px dashed rgb(0, 120, 0);
+    background-color: rgb(141, 210, 141);
+}

@@ -20,9 +20,14 @@
             }
         }
 
-        return {
-            getAds: getAds
+        var approveAd = function (id) {
+            console.log(getHeaders());
+            return $http.put(rootUrl + "admin/ads/approve/" + id, null, getHeaders());
+        }
 
+        return {
+            getAds: getAds,
+            approveAd: approveAd
         };
     }
 

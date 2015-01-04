@@ -10,7 +10,7 @@
         <link href="styles/navigators.css" rel="stylesheet" />
     </head>
     <body>
-        <header class="container"ng-controller="headerController">
+        <header ng-class="{adminHeader:user.isAdmin, container:true}" ng-controller="headerController">
             <div ng-show="user" id="user-panel">
                 <span ng-cloak="">{{user.username}}</span>
                 <a href="/" ng-click="logout()" ng-cloak="">Logout</a>

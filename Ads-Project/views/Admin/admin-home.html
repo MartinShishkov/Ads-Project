@@ -37,6 +37,13 @@
                 <input type="text" name="townName" disabled="" value="{{ad.townName}}" />
             </div>
         </div>
+        
+        <div id="admin-ad-buttons">
+            <input type="text" name="adStatus" disabled="" value="{{ad.status}}"/>
+            <button type="button" class="button" ng-hide="ad.status == 'Published'" ng-click="approveAd(ad.id)">Approve</button>
+            <button type="button" class="button" ng-click="editAd()">Edit</button>
+            <button type="button" class="button" ng-click="deleteAd()">Delete</button>
+        </div>
     </div>
 
     <div id="pagination">
