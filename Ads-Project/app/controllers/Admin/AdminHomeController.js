@@ -4,7 +4,7 @@
     var adminHomeController = function ($scope, AdminDataQueryExecutor) {
         console.log("In admin home controller");
 
-        var pageSize = 2;
+        var pageSize = 1;
         var startPage = 1;
         var displayPages = 4;
 

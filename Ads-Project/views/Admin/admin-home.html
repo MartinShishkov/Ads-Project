@@ -8,7 +8,12 @@
 
         <div id="userInfo">
             <div class="info-field">
-                <label for="ownerName">Name</label>
+                <label for="ownerUsername">Username:</label>
+                <input type="text" name="ownerUsername" disabled="" value="{{ad.ownerUsername}}" />
+            </div>
+
+            <div class="info-field">
+                <label for="ownerName">Name:</label>
                 <input type="text" name="ownerName" disabled="" value="{{ad.ownerName}}" />
             </div>
 
@@ -20,6 +25,16 @@
             <div class="info-field">
                 <label for="ownerPhone">Tel.</label>
                 <input type="text" name="ownerPhone" disabled="" value="{{ad.ownerPhone}}" />
+            </div>
+           
+            <div class="info-field">
+                <label for="categoryName">Category:</label>
+                <input type="text" name="categoryName" disabled="" value="{{ad.categoryName}}" />
+            </div>
+
+            <div class="info-field">
+                <label for="townName">Town:</label>
+                <input type="text" name="townName" disabled="" value="{{ad.townName}}" />
             </div>
         </div>
     </div>
