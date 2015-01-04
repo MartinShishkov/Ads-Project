@@ -40,18 +40,6 @@
 
         // ======================= Pagination Logic =================================
 
-        //function loadPages(numPages) {
-        //    var pages = [];
-
-        //    for (var i = 0; i < numPages; i++) {
-        //        pages[i] = {
-        //            title: (i + 1).toString(),
-        //            pageNumber: i + 1
-        //        };
-        //    }
-        //    return pages;
-        //}
-
         // if problems with undefined values in the array occur
         // use .. track by $index in the ng-repeat directive of the <li> items
         // Ex.: ng-repeat="page in pages track by $index"

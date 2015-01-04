@@ -1,7 +1,7 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var editAdController = function ($scope, $location, $routeParams, DataQueryExecutor, UserQueryExecutor, MessageProvider) {
+    var editAdController = function ($scope, $location, $routeParams, DataQueryExecutor, MessageProvider) {
         console.log('In edit ad controller.');
 
         DataQueryExecutor.getTowns()
@@ -71,10 +71,10 @@
             }
 
             DataQueryExecutor.editAd($routeParams.adId, newAd).then(function (result) {
-                console.log("submitted");
+                MessageProvider.success(result.data.message);
                 $location.path('/user/ads');
             }, function(error) {
-                console.log(error);
+                MessageProvider.error(error.message);
             });
 
         }

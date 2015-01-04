@@ -55,6 +55,21 @@
                 controller: "adminHomeController",
                 resolve: { adminRequired: adminRequired }
             })
+            .when('/admin/users/list', {
+                templateUrl: "./views/Admin/admin-users-list.html",
+                controller: "adminUsersController",
+                resolve: { adminRequired: adminRequired }
+            })
+            .when('/admin/categories/list', {
+                templateUrl: "./views/Admin/admin-categories-list.html",
+                controller: "adminCategoriesController",
+                resolve: { adminRequired: adminRequired }
+            })
+            .when('/admin/towns/list', {
+                templateUrl: "./views/Admin/admin-towns-list.html",
+                controller: "adminTownsController",
+                resolve: { adminRequired: adminRequired }
+            })
             .otherwise({redirectTo: "/"});
     });
 

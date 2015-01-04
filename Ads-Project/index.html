@@ -7,6 +7,7 @@
         <link href="styles/containers.css" rel="stylesheet" />
         <link href="styles/ads.css" rel="stylesheet" />
         <link href="styles/pagination.css" rel="stylesheet" />
+        <link href="styles/navigators.css" rel="stylesheet" />
     </head>
     <body>
         <header class="container"ng-controller="headerController">
@@ -17,24 +18,44 @@
             <h2 ng-cloak="">Ads - {{currentPage}}</h2>
         </header>
         
-        <aside class="container" id="navigator" ng-show="user" ng-cloak="" ng-controller="navigationController">
-            <h3>Navigation</h3>
-            <ul>
-                <li ng-class="{active:isActiveTab('/user/home')}">
-                    <a href="#/user/home">Home</a>
-                </li>
-                <li ng-class="{active:isActiveTab('/user/ads')}">
-                    <a href="#/user/ads">My Ads</a>
-                </li>
-                <li ng-class="{active:isActiveTab('/user/ads/publish')}">
-                    <a href="#/user/ads/publish">Publish New Ad</a>
-                </li>
-                <li ng-class="{active:isActiveTab('/user/profile')}">
-                    <a href="#/user/profile">Edit Profile</a>
-                </li>
-            </ul>
-        </aside>
-        
+        <div id="navigators">
+            <aside class="container navigator"ng-show="user" ng-cloak="" ng-controller="navigationController">
+                <h3>Navigation</h3>
+                <ul>
+                    <li ng-class="{active:isActiveTab('/user/home')}">
+                        <a href="#/user/home">Home</a>
+                    </li>
+                    <li ng-class="{active:isActiveTab('/user/ads')}">
+                        <a href="#/user/ads">My Ads</a>
+                    </li>
+                    <li ng-class="{active:isActiveTab('/user/ads/publish')}">
+                        <a href="#/user/ads/publish">Publish New Ad</a>
+                    </li>
+                    <li ng-class="{active:isActiveTab('/user/profile')}">
+                        <a href="#/user/profile">Edit Profile</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside class="container navigator" ng-show="user.isAdmin" ng-cloak="" ng-controller="adminNavigationController">
+                <h3>Administrator</h3>
+                <ul>
+                    <li ng-class="{active:isActiveTab('/admin/home')}">
+                        <a href="#/admin/home">Ads</a>
+                    </li>
+                    <li ng-class="{active:isActiveTab('/admin/users/list')}">
+                        <a href="#/admin/users/list">Users</a>
+                    </li>
+                    <li ng-class="{active:isActiveTab('/admin/categories/list')}">
+                        <a href="#/admin/categories/list">Categories</a>
+                    </li>
+                    <li ng-class="{active:isActiveTab('/admin/towns/list')}">
+                        <a href="#/admin/towns/list">Towns</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
         <aside class="container" id="aside-actions" ng-hide="user" ng-cloak="">
             <p>To publish a new ad, please login.</p>
             <a class="button" href="#/login">Login</a>
@@ -74,5 +95,9 @@
         <script src="app/controllers/DeleteAdController.js"></script>
         <script src="app/controllers/EditAdController.js"></script>
         <script src="app/controllers/Admin/AdminHomeController.js"></script>
+        <script src="app/controllers/Admin/AdminNavigationController.js"></script>
+        <script src="app/controllers/Admin/AdminUsersController.js"></script>
+        <script src="app/controllers/Admin/AdminCategoriesController.js"></script>
+        <script src="app/controllers/Admin/AdminTownsController.js"></script>
     </body>
 </html>
