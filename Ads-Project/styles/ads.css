@@ -3,6 +3,8 @@
     height: 760px;
     display: inline-block;
     position: relative;
+    margin: 0px 40px 0px 40px;
+    float: left;
 }
 
 .ad {

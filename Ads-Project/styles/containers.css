@@ -12,11 +12,19 @@
     margin-right: 20px;
 }
 
+#filters {
+    float: left;
+    display: inline;
+}
+
 #aside-categories {
-    float: right;
+    /*float: right;*/
+    display: block;
     width: 200px;
+    height: 200px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 #aside-categories h3 {
@@ -27,15 +35,20 @@
 }
 
 #aside-categories ul {
+    height: 150px;
+    overflow: auto;
     list-style: none;
     padding: 0px;
 }
 
 #aside-towns {
-    float: right;
+    /*float: right;*/
+    display: block;
     width: 200px;
+    height: 200px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 #aside-towns h3 {
@@ -46,6 +59,8 @@
 }
 
 #aside-towns ul {
+    height: 150px;
+    overflow: auto;
     list-style: none;
     padding: 0px;
 }
