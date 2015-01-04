@@ -16,31 +16,34 @@
         $rootScope.$on('$routeChangeSuccess', function() {
             switch ($location.path()) {
                 case '/':
-                    $scope.currentPage = "Home";
+                    $scope.currentPage = "Ads - Home";
                     break;
                 case '/login':
-                    $scope.currentPage = "Login";
+                    $scope.currentPage = "Ads - Login";
                     break;
                 case '/register':
-                    $scope.currentPage = "Registration";
+                    $scope.currentPage = "Ads - Registration";
                     break;
                 case '/user/home':
-                    $scope.currentPage = "Home";
+                    $scope.currentPage = "Ads - Home";
                     break;
                 case '/user/ads':
-                    $scope.currentPage = "My Ads";
+                    $scope.currentPage = "Ads - My Ads";
                     break;
                 case '/user/ads/publish':
-                    $scope.currentPage = "Publish New Ad";
+                    $scope.currentPage = "Ads - Publish New Ad";
                     break;
                 case '/user/profile':
-                    $scope.currentPage = "Edit User Profile";
+                    $scope.currentPage = "Ads - Edit User Profile";
                     break;
                 case '/user/ads/delete/' + $routeParams.adId:
-                    $scope.currentPage = "Delete Ad";
+                    $scope.currentPage = "Ads - Delete Ad";
                     break;
                 case '/user/ads/edit/' + $routeParams.adId:
-                    $scope.currentPage = "Edit Ad";
+                    $scope.currentPage = "Ads - Edit Ad";
+                    break;
+                case '/admin/home':
+                    $scope.currentPage = "Ads Administration - Ads";
                     break;
                 default:
                     break;

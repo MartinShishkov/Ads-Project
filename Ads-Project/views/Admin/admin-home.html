@@ -1,1 +1,61 @@
-﻿<h2>Admin Home</h2>
+﻿<div id="ads-field">
+    <div ng-repeat="ad in ads" class="ad container">
+        <h3 id="adTitle">{{ad.title}}</h3>
+        <span id="adDate">{{ad.date | date:'short'}}</span>
+        <textarea id="adText" disabled="">{{ad.text}}</textarea>
+
+        <img id="adImage" src="{{ad.imageDataUrl}}" />
+
+        <div id="userInfo">
+            <div class="info-field">
+                <label for="ownerName">Name</label>
+                <input type="text" name="ownerName" disabled="" value="{{ad.ownerName}}" />
+            </div>
+
+            <div class="info-field">
+                <label for="ownerEmail">Email:</label>
+                <input type="email" name="ownerEmail" disabled="" value="{{ad.ownerEmail}}" />
+            </div>
+
+            <div class="info-field">
+                <label for="ownerPhone">Tel.</label>
+                <input type="text" name="ownerPhone" disabled="" value="{{ad.ownerPhone}}" />
+            </div>
+        </div>
+    </div>
+
+    <div id="pagination">
+        <button ng-click="goToFirstPage()" class="paginationBtn">First</button>
+        <button ng-click="onePageBack() " class="paginationBtn">Previous</button>
+        <ul>
+            <li class="paginationBtn"
+                ng-repeat="page in pages"
+                ng-click="goToPage(page.pageNumber)"
+                ng-class="{activePage:isActivePage(page.pageNumber)}">
+                {{page.title}}
+            </li>
+        </ul>
+        <button ng-click="onePageForward()" class="paginationBtn">Next</button>
+        <button ng-click="goToLastPage()" class="paginationBtn">Last</button>
+    </div>
+</div>
+
+
+
+<aside class="container" id="aside-categories">
+    <h3>Categories</h3>
+    <ul>
+        <li ng-repeat="category in categories" ng-click="selectCategory(category, $event)" class="category">
+            <h4>{{category.name}}</h4>
+        </li>
+    </ul>
+</aside>
+
+<aside class="container" id="aside-towns">
+    <h3>Towns</h3>
+    <ul>
+        <li ng-repeat="town in towns" class="town">
+            <h4>{{town.name}}</h4>
+        </li>
+    </ul>
+</aside>

@@ -15,7 +15,7 @@
                 <span ng-cloak="">{{user.username}}</span>
                 <a href="/" ng-click="logout()" ng-cloak="">Logout</a>
             </div>
-            <h2 ng-cloak="">Ads - {{currentPage}}</h2>
+            <h2 ng-cloak="">{{currentPage}}</h2>
         </header>
         
         <div id="navigators">
@@ -83,6 +83,7 @@
         <script src="app/services/Session.js"></script>
         <script src="app/services/Auth.js"></script>
         <script src="app/services/DataQueryExecutor.js"></script>
+        <script src="app/services/AdminDataQueryExecutor.js"></script>
         <script src="app/services/UserQueryExecutor.js"></script>
         <script src="app/controllers/HomeController.js"></script>
         <script src="app/controllers/HeaderController.js"></script>
