@@ -5,6 +5,7 @@
     // defining the root url for the services
     // to use across all controllers
     app.value("rootUrl", "http://localhost:1337/api/");
+    //app.value("rootUrl", "http://softuni-ads.azurewebsites.net/api/");
 
     app.config(function ($routeProvider) {
         $routeProvider
@@ -70,6 +71,11 @@
                 controller: "adminTownsController",
                 resolve: { adminRequired: adminRequired }
             })
+            .when('/admin/ads/delete/:adId', {
+                templateUrl: "./views/Admin/admin-delete-ad.html",
+                controller: "adminDeleteAdController",
+                resolve: { adminRequired: adminRequired }
+            })
             .otherwise({redirectTo: "/"});
     });
 
@@ -92,9 +98,4 @@
             $location.path('/user/home');
         }
     }
-
-    var isAdmin = function(Auth) {
-        return Auth.isAdmin();
-    }
-
 }());

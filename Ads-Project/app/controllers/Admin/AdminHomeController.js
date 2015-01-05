@@ -1,7 +1,7 @@
 ﻿(function () {
     var module = angular.module('AdsProject');
 
-    var adminHomeController = function ($scope, AdminDataQueryExecutor, MessageProvider) {
+    var adminHomeController = function ($scope, $location, AdminDataQueryExecutor, DataQueryExecutor, MessageProvider) {
         console.log("In admin home controller");
 
         var pageSize = 1;
@@ -9,6 +9,33 @@
         var displayPages = 4;
 
         $scope.activePage = startPage;
+
+        DataQueryExecutor.getCategories().then(function(result) {
+            $scope.categories = result.data;
+        });
+
+        DataQueryExecutor.getTowns().then(function (result) {
+            $scope.towns = result.data;
+        });
+
+        $scope.adsFilters = [
+            {
+                title: "All",
+                filter: ""
+            },
+            {
+                title: "Published",
+                filter: "Published"
+            },
+            {
+                title: "Waiting Approval",
+                filter: "WaitingApproval"
+            },
+            {
+                title: "Inactive",
+                filter: "Inactive"
+            }
+        ];
 
         AdminDataQueryExecutor.getAds(pageSize, startPage, null).then(onAdsLoad);
 
@@ -88,6 +115,10 @@
             });
 
             console.log(id);
+        }
+
+        $scope.deleteAd = function(id) {
+            $location.path("/admin/ads/delete/" + id);
         }
     }
 

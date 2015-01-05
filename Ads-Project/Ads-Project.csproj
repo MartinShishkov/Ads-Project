@@ -60,6 +60,7 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\controllers\Admin\AdminCategoriesController.js" />
+    <Content Include="app\controllers\Admin\AdminDeleteAdController.js" />
     <Content Include="app\controllers\Admin\AdminHomeController.js" />
     <Content Include="app\controllers\Admin\AdminNavigationController.js" />
     <Content Include="app\controllers\Admin\AdminTownsController.js" />
@@ -86,6 +87,8 @@
     <Content Include="libs\angular.js" />
     <Content Include="libs\jquery.js" />
     <Content Include="libs\jquery.noty.packaged.min.js" />
+    <Content Include="styles\admin-ads-styles.css" />
+    <Content Include="styles\admin-delete-ad-styles.css" />
     <Content Include="styles\ads.css" />
     <Content Include="styles\buttons.css" />
     <Content Include="styles\containers.css" />
@@ -98,6 +101,7 @@
     <Content Include="styles\user-ads-publish-styles.css" />
     <Content Include="styles\user-edit-styles.css" />
     <Content Include="views\Admin\admin-categories-list.html" />
+    <Content Include="views\Admin\admin-delete-ad.html" />
     <Content Include="views\Admin\admin-home.html" />
     <Content Include="views\Admin\admin-towns-list.html" />
     <Content Include="views\Admin\admin-users-list.html" />

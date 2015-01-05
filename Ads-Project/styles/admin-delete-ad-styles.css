@@ -1,0 +1,14 @@
+﻿.container {
+    border-radius: 15px;
+}
+
+.ad h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+#admin-ad-buttons {
+    text-align: center;
+    border-style: none;
+}

@@ -1,0 +1,86 @@
+﻿#aside-filter-categories {
+    /*float: right;*/
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#aside-filter-categories h3 {
+    text-align: center;
+    margin: 0px;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+#aside-filter-categories ul {
+    height: 150px;
+    overflow: auto;
+    list-style: none;
+    padding: 0px;
+}
+
+#aside-filter-towns {
+    /*float: right;*/
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#aside-filter-towns h3 {
+    text-align: center;
+    margin: 0px;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+#aside-filter-towns ul {
+    height: 150px;
+    overflow: auto;
+    list-style: none;
+    padding: 0px;
+}
+
+#aside-filter-status {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#aside-filter-status h3 {
+    text-align: center;
+    margin: 0px;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+#aside-filter-status ul {
+    height: 150px;
+    overflow: auto;
+    list-style: none;
+    padding: 0px;
+}
+
+#aside-filter-status ul li {
+    display: block;
+    padding: 15px;
+    margin: 5px;
+}
+
+#aside-filter-status ul li:hover {
+    background-color: rgb(68, 137, 68);
+}
+
+#aside-filter-status ul .activeFilter {
+    background-color: #f8c032;
+    border: 1px solid #805f0b;
+    color: #ffffff;
+}

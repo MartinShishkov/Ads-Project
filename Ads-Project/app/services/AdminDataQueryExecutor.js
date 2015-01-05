@@ -25,9 +25,19 @@
             return $http.put(rootUrl + "admin/ads/approve/" + id, null, getHeaders());
         }
 
+        var getAdById = function(id) {
+            return $http.get(rootUrl + "admin/ads/" + id, getHeaders());
+        }
+
+        var deleteAdById = function(id) {
+            return $http.delete(rootUrl + "admin/ads/" + id, getHeaders());
+        }
+
         return {
             getAds: getAds,
-            approveAd: approveAd
+            approveAd: approveAd,
+            getAdById: getAdById,
+            deleteAdById: deleteAdById
         };
     }
 

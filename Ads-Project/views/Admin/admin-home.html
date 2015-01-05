@@ -1,4 +1,5 @@
-﻿<div id="ads-field">
+﻿<link href="../../styles/admin-ads-styles.css" rel="stylesheet" />
+<div id="ads-field">
     <div ng-repeat="ad in ads" class="ad container">
         <h3 id="adTitle">{{ad.title}}</h3>
         <span id="adDate">{{ad.date | date:'short'}}</span>
@@ -41,8 +42,8 @@
         <div id="admin-ad-buttons">
             <input type="text" name="adStatus" disabled="" value="{{ad.status}}"/>
             <button type="button" class="button" ng-hide="ad.status == 'Published'" ng-click="approveAd(ad.id)">Approve</button>
-            <button type="button" class="button" ng-click="editAd()">Edit</button>
-            <button type="button" class="button" ng-click="deleteAd()">Delete</button>
+            <button type="button" class="button" ng-click="editAd(ad.id)">Edit</button>
+            <button type="button" class="button" ng-click="deleteAd(ad.id)">Delete</button>
         </div>
     </div>
 
@@ -63,7 +64,7 @@
 </div>
 
 <div id="filters">
-    <aside class="container" id="aside-categories">
+    <aside class="container" id="aside-filter-categories">
         <h3>Categories</h3>
         <ul>
             <li ng-repeat="category in categories" ng-click="selectCategory(category, $event)" class="category">
@@ -72,11 +73,22 @@
         </ul>
     </aside>
 
-    <aside class="container" id="aside-towns">
+    <aside class="container" id="aside-filter-towns">
         <h3>Towns</h3>
         <ul>
             <li ng-repeat="town in towns" class="town">
                 <h4>{{town.name}}</h4>
+            </li>
+        </ul>
+    </aside>
+    
+    <aside class="container" id="aside-filter-status">
+        <h3>Ads</h3>
+        <ul>
+            <li ng-repeat="filter in adsFilters"
+                ng-class="{activeFilter:isActiveFilter(filter.title)}"
+                ng-click="filterAdsBy(filter)">
+                {{filter.title}}
             </li>
         </ul>
     </aside>
