@@ -89,6 +89,7 @@
     <Content Include="libs\jquery.noty.packaged.min.js" />
     <Content Include="styles\admin-ads-styles.css" />
     <Content Include="styles\admin-delete-ad-styles.css" />
+    <Content Include="styles\admin-towns-styles.css" />
     <Content Include="styles\admin-users-styles.css" />
     <Content Include="styles\ads.css" />
     <Content Include="styles\buttons.css" />

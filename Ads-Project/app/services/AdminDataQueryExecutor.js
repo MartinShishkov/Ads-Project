@@ -47,13 +47,18 @@
             return $http.delete(rootUrl + "admin/ads/" + id, getHeaders());
         }
 
+        var getAllTowns = function() {
+            return $http.get(rootUrl + "admin/towns", getHeaders());
+        }
+
         return {
             getAds: getAds,
             approveAd: approveAd,
             getAdById: getAdById,
             getAdsByAllFilters: getAdsByAllFilters,
             deleteAdById: deleteAdById,
-            getAllUsers: getAllUsers
+            getAllUsers: getAllUsers,
+            getAllTowns: getAllTowns
         };
     }
 
