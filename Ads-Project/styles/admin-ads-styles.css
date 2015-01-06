@@ -62,25 +62,3 @@
     padding: 10px;
 }
 
-#aside-filter-status ul {
-    height: 150px;
-    overflow: auto;
-    list-style: none;
-    padding: 0px;
-}
-
-#aside-filter-status ul li {
-    display: block;
-    padding: 15px;
-    margin: 5px;
-}
-
-#aside-filter-status ul li:hover {
-    background-color: rgb(68, 137, 68);
-}
-
-.activeStatus {
-    background-color: #f8c032;
-    border: 1px solid #805f0b;
-    color: #ffffff;
-}

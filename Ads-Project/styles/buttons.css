@@ -52,3 +52,29 @@
     background-color: rgb(248, 211, 30);
     border: 1px solid rgb(188, 162, 35);
 }
+
+#aside-filter-status ul {
+    height: 150px;
+    overflow: auto;
+    list-style: none;
+    padding: 0px;
+}
+
+#aside-filter-status h4 {
+    margin: 0px;
+}
+
+#aside-filter-status ul li {
+    display: block;
+    padding: 15px;
+    margin: 5px;
+}
+
+#aside-filter-status ul li:hover {
+    background-color: rgb(68, 137, 68);
+}
+
+#aside-filter-status .activeStatus {
+    background-color: rgb(248, 211, 30);
+    border: 1px solid rgb(188, 162, 35);
+}
