@@ -7,7 +7,17 @@
         AdminDataQueryExecutor.getAllCategories().then(function(result) {
             $scope.categories = result.data.categories;
         });
+
+        $scope.create = function () {
+            $location.path('/admin/categories/create');
+        }
+
+        $scope.delete = function (id) {
+            
+        }
     }
+
+    
 
     module.controller('adminCategoriesController', adminCategoriesController);
 }());

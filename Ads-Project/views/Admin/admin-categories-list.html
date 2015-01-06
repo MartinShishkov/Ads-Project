@@ -1,18 +1,25 @@
 ﻿<link href="../../styles/admin-categories-styles.css" rel="stylesheet" />
-<table id="categories-table">
-    <thead>
-        <tr>
-            <th>Category</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="category in categories">
-            <td class="categoryName">{{category.username}}</td>
-            <td>
-                <a href="#">Edit</a>
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+
+<div>
+    <table id="categories-table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="category in categories">
+                <td class="categoryName">{{category.username}}</td>
+                <td>
+                    <a href="#/admin/categories/edit/{{category.id}}">Edit</a>
+                    <a href="#/admin/categories/delete/{{category.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div id="btnField">
+        <button class="button" id="newCategoryBtn" ng-click="create()">Create New Category</button>
+    </div>
+</div>

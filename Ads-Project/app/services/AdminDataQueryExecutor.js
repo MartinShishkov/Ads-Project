@@ -55,6 +55,14 @@
             return $http.get(rootUrl + "admin/categories", getHeaders());
         }
 
+        var deleteCategory = function(id) {
+            return $http.delete(rootUrl + "admin/categories/delete/" + id, getHeaders());
+        }
+
+        var createCategory = function (category) {
+            return $http.post(rootUrl + "admin/categories", category, getHeaders());
+        }
+
         return {
             getAds: getAds,
             approveAd: approveAd,
@@ -63,7 +71,9 @@
             deleteAdById: deleteAdById,
             getAllUsers: getAllUsers,
             getAllTowns: getAllTowns,
-            getAllCategories: getAllCategories
+            getAllCategories: getAllCategories,
+            deleteCategory: deleteCategory,
+            createCategory: createCategory
         };
     }
 

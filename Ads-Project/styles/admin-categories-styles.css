@@ -13,3 +13,11 @@
     padding-right: 100px;
 }
 
+#newCategoryBtn {
+    margin: 0 auto;
+}
+
+#btnField {
+    margin-top: 20px;
+    text-align: center;
+}
