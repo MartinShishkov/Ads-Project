@@ -1,1 +1,24 @@
-﻿<h2>Admin Users</h2>
+﻿<link href="../../styles/admin-users-styles.css" rel="stylesheet" />
+<table id="users-table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users">
+            <td>{{user.username}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phoneNumber}}</td>
+            <td>
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>    
+    </tbody>
+</table>

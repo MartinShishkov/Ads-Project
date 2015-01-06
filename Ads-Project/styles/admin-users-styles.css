@@ -1,0 +1,10 @@
+﻿#users-table {
+    margin: 0 auto;
+}
+
+#users-table th, td {
+    background-color: rgb(197, 224, 180);
+    border: 1px solid rgb(0, 116, 0);
+    padding: 5px;
+    box-shadow: 0px 1px 1px 1px rgb(179, 179, 179);
+}

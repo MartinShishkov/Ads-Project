@@ -30,6 +30,10 @@
                 , getHeaders());
         }
 
+        var getAllUsers = function() {
+            return $http.get(rootUrl + "admin/users", getHeaders());
+        }
+
         var approveAd = function (id) {
             console.log(getHeaders());
             return $http.put(rootUrl + "admin/ads/approve/" + id, null, getHeaders());
@@ -48,7 +52,8 @@
             approveAd: approveAd,
             getAdById: getAdById,
             getAdsByAllFilters: getAdsByAllFilters,
-            deleteAdById: deleteAdById
+            deleteAdById: deleteAdById,
+            getAllUsers: getAllUsers
         };
     }
 
