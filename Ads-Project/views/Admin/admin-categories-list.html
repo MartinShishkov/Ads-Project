@@ -1,1 +1,18 @@
-﻿<h2>Admin Categories</h2>
+﻿<link href="../../styles/admin-categories-styles.css" rel="stylesheet" />
+<table id="categories-table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="category in categories">
+            <td class="categoryName">{{category.username}}</td>
+            <td>
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

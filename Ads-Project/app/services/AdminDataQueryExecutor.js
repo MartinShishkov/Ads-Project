@@ -51,6 +51,10 @@
             return $http.get(rootUrl + "admin/towns", getHeaders());
         }
 
+        var getAllCategories = function () {
+            return $http.get(rootUrl + "admin/categories", getHeaders());
+        }
+
         return {
             getAds: getAds,
             approveAd: approveAd,
@@ -58,7 +62,8 @@
             getAdsByAllFilters: getAdsByAllFilters,
             deleteAdById: deleteAdById,
             getAllUsers: getAllUsers,
-            getAllTowns: getAllTowns
+            getAllTowns: getAllTowns,
+            getAllCategories: getAllCategories
         };
     }
 
