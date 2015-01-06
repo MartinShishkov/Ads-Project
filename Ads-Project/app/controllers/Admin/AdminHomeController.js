@@ -3,21 +3,6 @@
 
     var adminHomeController = function ($scope, $location, AdminDataQueryExecutor, DataQueryExecutor, MessageProvider) {
         console.log("In admin home controller");
-
-        var pageSize = 1;
-        var startPage = 1;
-        var displayPages = 4;
-
-        $scope.activePage = startPage;
-
-        DataQueryExecutor.getCategories().then(function(result) {
-            $scope.categories = result.data;
-        });
-
-        DataQueryExecutor.getTowns().then(function (result) {
-            $scope.towns = result.data;
-        });
-
         $scope.adsFilters = [
             {
                 title: "All",
@@ -37,7 +22,63 @@
             }
         ];
 
-        AdminDataQueryExecutor.getAds(pageSize, startPage, null).then(onAdsLoad);
+        var pageSize = 1;
+        var startPage = 1;
+        var displayPages = 4;
+
+        $scope.activePage = startPage;
+        $scope.activeStatus = $scope.adsFilters[0];
+        $scope.activeTown = "";
+        $scope.activeCategory = "";
+
+        DataQueryExecutor.getCategories().then(function(result) {
+            $scope.categories = result.data;
+        });
+
+        DataQueryExecutor.getTowns().then(function (result) {
+            $scope.towns = result.data;
+        });
+
+        
+
+        $scope.isActiveStatus = function(filterTitle) {
+            //return $scope.activeStatus.title == filterTitle;
+            return filterTitle === $scope.activeStatus.title;
+        }
+
+        $scope.isActiveCategory = function (id) {
+            return $scope.activeCategory == id;
+        }
+
+        $scope.isActiveTown = function (id) {
+            return $scope.activeTown == id;
+        }
+
+        $scope.filterByCategory = function(id) {
+            $scope.activeCategory = id;
+
+            updateAds(pageSize, startPage, $scope.activeStatus.filter, $scope.activeTown, $scope.activeCategory);
+        }
+
+        $scope.filterByTown = function (id) {
+            $scope.activeTown = id;
+
+            updateAds(pageSize, startPage, $scope.activeStatus.filter, $scope.activeTown, $scope.activeCategory);
+        }
+
+        $scope.filterByStatus = function (filter) {
+            $scope.activeStatus = filter;
+
+            updateAds(pageSize, startPage, $scope.activeStatus.filter, $scope.activeTown, $scope.activeCategory);
+        }
+
+        function updateAds(pageSizeParam, startPageParam, status, townId, categoryId) {
+            AdminDataQueryExecutor.getAdsByAllFilters(pageSizeParam, startPageParam, status, townId, categoryId)
+                                  .then(onAdsLoad);
+        }
+
+        //AdminDataQueryExecutor.getAds(pageSize, startPage, null).then(onAdsLoad);
+        updateAds(pageSize, startPage, $scope.activeStatus.filter, $scope.activeTown, $scope.activeCategory);
 
         function onAdsLoad(result) {
             $scope.ads = result.data.ads;
@@ -73,7 +114,7 @@
 
         $scope.goToPage = function (pageNumber) {
             $scope.activePage = pageNumber;
-            AdminDataQueryExecutor.getAds(pageSize, pageNumber, null).then(onAdsLoad);
+            updateAds(pageSize, pageNumber, $scope.activeStatus.filter, $scope.activeTown, $scope.activeCategory);
         }
 
         $scope.isActivePage = function (pageNumber) {
@@ -113,8 +154,6 @@
             }, function(error) {
                 MessageProvider.error(error.data.message);
             });
-
-            console.log(id);
         }
 
         $scope.deleteAd = function(id) {

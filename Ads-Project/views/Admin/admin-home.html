@@ -64,32 +64,36 @@
 </div>
 
 <div id="filters">
-    <aside class="container" id="aside-filter-categories">
+    <aside class="container" id="aside-categories">
         <h3>Categories</h3>
         <ul>
-            <li ng-class="">All</li>
-            <li ng-repeat="category in categories" ng-click="selectCategory(category, $event)" class="category">
+            <li ng-class="{activeCategory:isActiveCategory(''),category:true}" ng-click="filterByCategory('')">
+                <h4>All</h4>
+            </li>
+            <li ng-repeat="category in categories" ng-click="filterByCategory(category.id)" ng-class="{activeCategory:isActiveCategory(category.id),category:true}">
                 <h4>{{category.name}}</h4>
             </li>
         </ul>
     </aside>
 
-    <aside class="container" id="aside-filter-towns">
+    <aside class="container" id="aside-towns">
         <h3>Towns</h3>
         <ul>
-            <li ng-class="">All</li>
-            <li ng-repeat="town in towns" class="town">
+            <li ng-class="{activeTown:isActiveTown(''),town:true}" ng-click="filterByTown('')">
+                <h4>All</h4>
+            </li>
+            <li ng-repeat="town in towns" ng-click="filterByTown(town.id)" ng-class="{activeTown:isActiveTown(town.id),town:true}">
                 <h4>{{town.name}}</h4>
             </li>
         </ul>
     </aside>
-    
+
     <aside class="container" id="aside-filter-status">
         <h3>Ads</h3>
         <ul>
             <li ng-repeat="filter in adsFilters"
-                ng-class="{activeFilter:isActiveFilter(filter.title)}"
-                ng-click="filterAdsBy(filter)">
+                ng-class="{activeStatus:isActiveStatus(filter.title)}"
+                ng-click="filterByStatus(filter)">
                 {{filter.title}}
             </li>
         </ul>

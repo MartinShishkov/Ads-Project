@@ -79,7 +79,7 @@
     background-color: rgb(68, 137, 68);
 }
 
-#aside-filter-status ul .activeFilter {
+.activeStatus {
     background-color: #f8c032;
     border: 1px solid #805f0b;
     color: #ffffff;
