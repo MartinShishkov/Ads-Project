@@ -31,6 +31,11 @@
     background-color: rgb(104, 153, 56);
 }
 
+#aside-categories .activeCategory {
+    background-color: rgb(248, 211, 30);
+    border: 1px solid rgb(188, 162, 35);
+}
+
 #aside-towns .town {
     padding: 10px;
 }
@@ -41,4 +46,9 @@
 
 #aside-towns .town:hover {
     background-color: rgb(104, 153, 56);
+}
+
+#aside-towns .activeTown {
+    background-color: rgb(248, 211, 30);
+    border: 1px solid rgb(188, 162, 35);
 }

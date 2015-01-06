@@ -67,6 +67,7 @@
     <aside class="container" id="aside-filter-categories">
         <h3>Categories</h3>
         <ul>
+            <li ng-class="">All</li>
             <li ng-repeat="category in categories" ng-click="selectCategory(category, $event)" class="category">
                 <h4>{{category.name}}</h4>
             </li>
@@ -76,6 +77,7 @@
     <aside class="container" id="aside-filter-towns">
         <h3>Towns</h3>
         <ul>
+            <li ng-class="">All</li>
             <li ng-repeat="town in towns" class="town">
                 <h4>{{town.name}}</h4>
             </li>

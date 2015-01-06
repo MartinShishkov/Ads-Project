@@ -16,6 +16,18 @@
             return $http.get(rootUrl + "ads?pagesize=" + pageSize + "&startpage=" + startPage);
         };
 
+        var getAdsByTown = function(pageSize, startPage, townId) {
+            return $http.get(rootUrl + "ads?pagesize=" + pageSize + "&startpage=" + startPage + "&townid=" + townId);
+        }
+
+        var getAdsByCategory = function (pageSize, startPage, categoryId) {
+            return $http.get(rootUrl + "ads?pagesize=" + pageSize + "&startpage=" + startPage + "&categoryid=" + categoryId);
+        }
+
+        var getAdsByTownAndCategory = function (pageSize, startPage, townId, categoryId) {
+            return $http.get(rootUrl + "ads?pagesize=" + pageSize + "&startpage=" + startPage + "&townid=" + townId +"&categoryid=" + categoryId);
+        }
+
         var getCategories = function() {
             return $http.get(rootUrl + "categories");
         };
@@ -52,9 +64,6 @@
             return $http.get(rootUrl + "user/ads/" + id.toString(), getHeaders());
         }
 
-        // TODO: Implement further logic
-        ////////////////////////////////
-
         return {
             getAds: getAds,
             getCategories: getCategories,
@@ -66,7 +75,10 @@
             publishAgain: publishAgain,
             editAd: editAd,
             deleteAd: deleteAd,
-            getAdById: getAdById
+            getAdById: getAdById,
+            getAdsByTown: getAdsByTown,
+            getAdsByCategory: getAdsByCategory,
+            getAdsByTownAndCategory: getAdsByTownAndCategory
         };
     }
 

@@ -3,23 +3,50 @@
     var module = angular.module('AdsProject');
 
     var homeController = function ($scope, DataQueryExecutor) {
+        console.log("In home controller.");
+
         var pageSize = 2;
         //var pageSize = 1;
         var startPage = 1;
         var displayPages = 4;
 
+        $scope.activeCategory = '';
+        $scope.activeTown = '';
         $scope.activePage = startPage;
 
-        DataQueryExecutor.getAds(pageSize, startPage).then(onAdsLoad);
+
+        $scope.isActiveCategory = function(id) {
+            return $scope.activeCategory == id;
+        }
+
+        $scope.isActiveTown = function (id) {
+            return $scope.activeTown == id;
+        }
+
+        $scope.filterByCategory = function (id) {
+            $scope.activeCategory = id;
+            updateAds(pageSize, startPage, $scope.activeTown, $scope.activeCategory);
+        }
+
+        $scope.filterByTown = function (id) {
+            $scope.activeTown = id;
+            updateAds(pageSize, startPage, $scope.activeTown, $scope.activeCategory);
+        }
+
+        updateAds(pageSize, startPage, $scope.activeTown, $scope.activeCategory);
 
         DataQueryExecutor.getCategories().then(onCategoriesLoad);
 
         DataQueryExecutor.getTowns().then(onTownsLoad);
 
+        function updateAds(pageSizeParam, startPageParam, townId, categoryId) {
+            DataQueryExecutor.getAdsByTownAndCategory(pageSizeParam, startPageParam, townId, categoryId)
+                         .then(onAdsLoad);
+        }
+
         function onAdsLoad(result) {
             $scope.ads = result.data.ads;
             $scope.allPages = result.data.numPages;
-            //$scope.pages = loadPages(result.data.numPages);
 
             // getting the new set of pages and removing
             // the undefined elements from the array
@@ -63,7 +90,8 @@
         
         $scope.goToPage = function(pageNumber) {
             $scope.activePage = pageNumber;
-            DataQueryExecutor.getAds(pageSize, pageNumber).then(onAdsLoad);
+
+            updateAds(pageSize, pageNumber, $scope.activeTown, $scope.activeCategory);
         }
 
         $scope.isActivePage = function (pageNumber) {
