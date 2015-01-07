@@ -2,8 +2,6 @@
     var module = angular.module('AdsProject');
 
     var categoriesEditController = function ($scope, $location, $routeParams, AdminDataQueryExecutor, MessageProvider) {
-        console.log("In admin edit categories controller.");
-
         AdminDataQueryExecutor.getAllCategories().then(function (result) {
             $scope.category = result.data.categories.filter(function (c) {
                 return c.id == $routeParams.categoryId;

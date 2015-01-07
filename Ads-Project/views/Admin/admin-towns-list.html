@@ -11,8 +11,8 @@
             <tr ng-repeat="town in towns">
                 <td class="townName">{{town.username}}</td>
                 <td>
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
+                    <a href="#/admin/towns/edit/{{town.id}}">Edit</a>
+                    <a href="#/admin/towns/delete/{{town.id}}">Delete</a>
                 </td>
             </tr>
         </tbody>

@@ -1,0 +1,29 @@
+﻿#delete-town {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#delete-town h3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+
+#delete-town label, input, .button {
+    margin: 10px;
+}
+
+#delete-town label, input {
+    display: block;
+}
+
+#delete-town input {
+    height: 30px;
+    width: 200px;
+}
+
+#buttons {
+    display: block;
+    text-align: center;
+}

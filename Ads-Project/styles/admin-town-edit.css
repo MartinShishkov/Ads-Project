@@ -1,0 +1,29 @@
+﻿#edit-town {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#edit-town h3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+
+#edit-town label, input, .button {
+    margin: 10px;
+}
+
+#edit-town label, input {
+    display: block;
+}
+
+#edit-town input {
+    height: 30px;
+    width: 200px;
+}
+
+#buttons {
+    display: block;
+    text-align: center;
+}

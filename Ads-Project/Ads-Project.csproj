@@ -100,6 +100,8 @@
     <Content Include="styles\admin-category-delete.css" />
     <Content Include="styles\admin-delete-ad-styles.css" />
     <Content Include="styles\admin-town-create.css" />
+    <Content Include="styles\admin-town-delete.css" />
+    <Content Include="styles\admin-town-edit.css" />
     <Content Include="styles\admin-towns-styles.css" />
     <Content Include="styles\admin-users-styles.css" />
     <Content Include="styles\ads.css" />

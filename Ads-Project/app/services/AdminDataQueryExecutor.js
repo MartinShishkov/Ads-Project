@@ -71,6 +71,15 @@
             return $http.post(rootUrl + "admin/towns", town, getHeaders());
         }
 
+        var deleteTown = function (id) {
+            return $http.delete(rootUrl + "admin/towns/" + id, getHeaders());
+        }
+
+        var editTown = function (id, town) {
+            return $http.put(rootUrl + "admin/towns/" + id, town, getHeaders());
+        }
+
+
         return {
             getAds: getAds,
             approveAd: approveAd,
@@ -83,7 +92,9 @@
             deleteCategory: deleteCategory,
             createCategory: createCategory,
             editCategory: editCategory,
-            createTown: createTown
+            createTown: createTown,
+            deleteTown: deleteTown,
+            editTown: editTown
         };
     }
 

@@ -1,1 +1,12 @@
-﻿<h2>town edit</h2>
+﻿<link href="../../styles/admin-town-edit.css" rel="stylesheet" />
+<div class="container" id="edit-town">
+    <h3>Edit Town</h3>
+
+    <label for="townUsername">Town:</label>
+    <input type="text" name="townUsername" ng-model="town.username" />
+
+    <div id="buttons">
+        <button class="button" ng-click="edit()">Edit</button>
+        <button class="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

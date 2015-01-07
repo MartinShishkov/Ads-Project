@@ -86,12 +86,12 @@
                 controller: "adminTownsController",
                 resolve: { adminRequired: adminRequired }
             })
-            .when('/admin/towns/edit/:categoryId', {
+            .when('/admin/towns/edit/:townId', {
                 templateUrl: "./views/Admin/admin-towns-edit.html",
                 controller: "townsEditController",
                 resolve: { adminRequired: adminRequired }
             })
-            .when('/admin/towns/delete/:categoryId', {
+            .when('/admin/towns/delete/:townId', {
                 templateUrl: "./views/Admin/admin-towns-delete.html",
                 controller: "townsDeleteController",
                 resolve: { adminRequired: adminRequired }

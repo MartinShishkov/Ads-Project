@@ -1,1 +1,12 @@
-﻿<h2>town delete</h2>
+﻿<link href="../../styles/admin-town-delete.css" rel="stylesheet" />
+<div class="container" id="delete-town">
+    <h3>Delete Town</h3>
+
+    <label for="townUsername">Town:</label>
+    <input type="text" name="townUsername" ng-model="town.username" disabled="" />
+
+    <div id="buttons">
+        <button class="button" ng-click="delete()">Delete</button>
+        <button class="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
