@@ -83,6 +83,14 @@
             return $http.delete(rootUrl + "admin/user/" + username, getHeaders());
         }
 
+        var updateUser = function(username, user) {
+            return $http.put(rootUrl + "admin/user/" + username, user, getHeaders());
+        }
+
+        var changeUserPassword = function(newPass) {
+            return $http.put(rootUrl + "admin/setpassword", newPass, getHeaders());
+        }
+
         return {
             getAds: getAds,
             approveAd: approveAd,
@@ -98,7 +106,9 @@
             createTown: createTown,
             deleteTown: deleteTown,
             editTown: editTown,
-            deleteUser: deleteUser
+            deleteUser: deleteUser,
+            updateUser: updateUser,
+            changeUserPassword: changeUserPassword
         };
     }
 

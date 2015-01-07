@@ -1,0 +1,47 @@
+﻿<link href="../../styles/admin-users-edit-styles.css" rel="stylesheet" />
+<div class="container" id="user-edit" ng-model="user">
+    <h2>Edit User Profile</h2>
+
+    <label for="userName">Name:</label>
+    <input type="text" name="userName" ng-model="user.name"/>
+
+    <label for="userEmail">Email:</label>
+    <input type="email" name="userEmail" ng-model="user.email"/>
+
+    <label for="userPhone">Phone:</label>
+    <input type="text" name="userPhone" ng-model="user.phoneNumber"/>
+
+    <label for="userTown">Town:</label>
+    <select name="userTown" ng-model="user.townId">
+        <option ng-repeat="town in towns track by $index" value="{{town.id}}">
+            {{town.name}}
+        </option>
+    </select>
+
+    <label for="userIsAdmin">Is Administrator?</label>
+    <input type="checkbox" name="userIsAdmin" ng-model="user.isAdmin"/>
+
+    <div id="btnField">
+        <button type="button" class="button" ng-click="update(user.username, user)">Update</button>
+        <button type="button" class="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
+
+<div id="user-change-pass" class="container">
+    <h2>Change Password</h2>
+
+    <div class="input-field">
+        <label for="userNewPass">New password:</label>
+        <input type="password" name="userNewPass" ng-model="userPassword.newPass" />
+    </div>
+
+    <div class="input-field">
+        <label for="userNewPassConfirm">Confirm new password:</label>
+        <input type="password" name="userNewPassConfirm" ng-model="userPassword.newPassConfirm" />
+    </div>
+
+    <div id="btnField">
+        <button class="button" ng-click="changePassword()">Change Password</button>
+        <button class="button" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

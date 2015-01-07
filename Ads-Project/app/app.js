@@ -66,6 +66,11 @@
                 controller: "usersDeleteController",
                 resolve: { adminRequired: adminRequired }
             })
+            .when('/admin/users/edit/:userId', {
+                templateUrl: "./views/Admin/admin-users-edit.html",
+                controller: "usersEditController",
+                resolve: { adminRequired: adminRequired }
+            })
             .when('/admin/categories/list', {
                 templateUrl: "./views/Admin/admin-categories-list.html",
                 controller: "adminCategoriesController",
@@ -114,6 +119,7 @@
             .otherwise({redirectTo: "/"});
     });
 
+    //#/admin/users/edit/:id
     ///admin/users/delete/:id
 
     var loginRequired = function($location, $q, Auth) {
