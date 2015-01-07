@@ -1,18 +1,24 @@
 ﻿<link href="../../styles/admin-towns-styles.css" rel="stylesheet" />
-<table id="towns-table">
-    <thead>
-        <tr>
-            <th>Town</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="town in towns">
-            <td class="townName">{{town.username}}</td>
-            <td>
-                <a href="#">Edit</a>
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div>
+    <table id="towns-table">
+        <thead>
+            <tr>
+                <th>Town</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="town in towns">
+                <td class="townName">{{town.username}}</td>
+                <td>
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="btnField">
+        <button class="button" id="newTownBtn" ng-click="create()">Create New Town</button>
+    </div>
+</div>

@@ -86,6 +86,21 @@
                 controller: "adminTownsController",
                 resolve: { adminRequired: adminRequired }
             })
+            .when('/admin/towns/edit/:categoryId', {
+                templateUrl: "./views/Admin/admin-towns-edit.html",
+                controller: "townsEditController",
+                resolve: { adminRequired: adminRequired }
+            })
+            .when('/admin/towns/delete/:categoryId', {
+                templateUrl: "./views/Admin/admin-towns-delete.html",
+                controller: "townsDeleteController",
+                resolve: { adminRequired: adminRequired }
+            })
+            .when('/admin/towns/create', {
+                templateUrl: "./views/Admin/admin-towns-create.html",
+                controller: "townsCreateController",
+                resolve: { adminRequired: adminRequired }
+            })
             .when('/admin/ads/delete/:adId', {
                 templateUrl: "./views/Admin/admin-delete-ad.html",
                 controller: "adminDeleteAdController",

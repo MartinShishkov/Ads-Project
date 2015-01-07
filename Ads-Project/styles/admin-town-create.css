@@ -1,0 +1,29 @@
+﻿#create-town {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#create-town h3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+
+#create-town label, input, .button {
+    margin: 10px;
+}
+
+#create-town label, input {
+    display: block;
+}
+
+#create-town input {
+    height: 30px;
+    width: 200px;
+}
+
+#buttons {
+    display: block;
+    text-align: center;
+}

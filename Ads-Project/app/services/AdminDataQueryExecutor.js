@@ -67,6 +67,10 @@
             return $http.put(rootUrl + "admin/categories/" + id, category, getHeaders());
         }
 
+        var createTown = function(town) {
+            return $http.post(rootUrl + "admin/towns", town, getHeaders());
+        }
+
         return {
             getAds: getAds,
             approveAd: approveAd,
@@ -78,7 +82,8 @@
             getAllCategories: getAllCategories,
             deleteCategory: deleteCategory,
             createCategory: createCategory,
-            editCategory: editCategory
+            editCategory: editCategory,
+            createTown: createTown
         };
     }
 

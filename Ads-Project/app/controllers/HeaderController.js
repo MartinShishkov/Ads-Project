@@ -51,18 +51,26 @@
                 case '/admin/categories/list':
                     $scope.currentPage = "Ads Administration - Categories";
                     break;
+                case '/admin/categories/edit/' + $routeParams.categoryId:
+                    $scope.currentPage = "Ads Administration - Edit Category";
+                    break;
+                case '/admin/categories/delete/' +$routeParams.categoryId:
+                    $scope.currentPage = "Ads Administration - Delete Category";
+                    break;
+                case '/admin/categories/create':
+                    $scope.currentPage = "Ads Administration - Create Category";
+                    break;
                 case '/admin/towns/list':
                     $scope.currentPage = "Ads Administration - Towns";
                     break;
                 case '/admin/ads/delete/' + $routeParams.adId:
                     $scope.currentPage = "Ads Administration – Delete Ad";
                     break;
+
                 default:
                     break;
             }
         });
-
-        ///admin/users/list
     }
 
     module.controller('headerController', headerController);

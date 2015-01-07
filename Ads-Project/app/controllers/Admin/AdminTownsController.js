@@ -8,6 +8,9 @@
             $scope.towns = result.data.towns;
         });
 
+        $scope.create = function() {
+            $location.path("/admin/towns/create");
+        }
     }
 
     module.controller('adminTownsController', adminTownsController);

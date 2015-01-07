@@ -68,6 +68,9 @@
     <Content Include="app\controllers\Admin\CategoriesCreateController.js" />
     <Content Include="app\controllers\Admin\CategoriesDeleteController.js" />
     <Content Include="app\controllers\Admin\CategoriesEditController.js" />
+    <Content Include="app\controllers\Admin\TownsCreateController.js" />
+    <Content Include="app\controllers\Admin\TownsDeleteController.js" />
+    <Content Include="app\controllers\Admin\TownsEditController.js" />
     <Content Include="app\controllers\DeleteAdController.js" />
     <Content Include="app\controllers\EditAdController.js" />
     <Content Include="app\controllers\EditUserController.js" />
@@ -96,6 +99,7 @@
     <Content Include="styles\admin-category-create.css" />
     <Content Include="styles\admin-category-delete.css" />
     <Content Include="styles\admin-delete-ad-styles.css" />
+    <Content Include="styles\admin-town-create.css" />
     <Content Include="styles\admin-towns-styles.css" />
     <Content Include="styles\admin-users-styles.css" />
     <Content Include="styles\ads.css" />
@@ -115,6 +119,9 @@
     <Content Include="views\Admin\admin-categories-list.html" />
     <Content Include="views\Admin\admin-delete-ad.html" />
     <Content Include="views\Admin\admin-home.html" />
+    <Content Include="views\Admin\admin-towns-create.html" />
+    <Content Include="views\Admin\admin-towns-delete.html" />
+    <Content Include="views\Admin\admin-towns-edit.html" />
     <Content Include="views\Admin\admin-towns-list.html" />
     <Content Include="views\Admin\admin-users-list.html" />
     <Content Include="views\delete-ad.html" />
