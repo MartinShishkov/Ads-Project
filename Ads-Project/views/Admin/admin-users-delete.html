@@ -1,0 +1,23 @@
+﻿<link href="../../styles/admin-users-delete-styles.css" rel="stylesheet" />
+<div class="container" id="user-delete" ng-model="user">
+    <h2>Confirm Deleting User?</h2>
+    
+    <label for="userName">Name:</label>
+    <input type="text" name="userName" ng-model="user.name" disabled="" />
+    
+    <label for="userEmail">Email:</label>
+    <input type="email" name="userEmail" ng-model="user.email" disabled="" />
+    
+    <label for="userPhone">Phone:</label>
+    <input type="text" name="userPhone" ng-model="user.phoneNumber" disabled="" />
+    
+    <label for="userTown">Town:</label>
+    <input type="text" name="userTown" ng-model="user.townName" disabled="" />
+    
+    <p>Deleting the user will also delete all ads, created by this user!</p>
+
+    <div id="btnField">
+        <button type="button" class="button" ng-click="delete(user.username)">Delete</button>
+        <button type="button" class="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

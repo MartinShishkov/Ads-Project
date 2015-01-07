@@ -79,6 +79,9 @@
             return $http.put(rootUrl + "admin/towns/" + id, town, getHeaders());
         }
 
+        var deleteUser = function(username) {
+            return $http.delete(rootUrl + "admin/user/" + username, getHeaders());
+        }
 
         return {
             getAds: getAds,
@@ -94,7 +97,8 @@
             editCategory: editCategory,
             createTown: createTown,
             deleteTown: deleteTown,
-            editTown: editTown
+            editTown: editTown,
+            deleteUser: deleteUser
         };
     }
 

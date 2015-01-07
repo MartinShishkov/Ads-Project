@@ -63,6 +63,15 @@
                 case '/admin/towns/list':
                     $scope.currentPage = "Ads Administration - Towns";
                     break;
+                case '/admin/towns/edit/' + $routeParams.townId:
+                    $scope.currentPage = "Ads Administration - Edit Town";
+                    break;
+                case '/admin/towns/delete/' + $routeParams.townId:
+                    $scope.currentPage = "Ads Administration - Delete Town";
+                    break;
+                case '/admin/towns/create':
+                    $scope.currentPage = "Ads Administration - Create Town";
+                    break;
                 case '/admin/ads/delete/' + $routeParams.adId:
                     $scope.currentPage = "Ads Administration – Delete Ad";
                     break;

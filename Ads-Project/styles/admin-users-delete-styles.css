@@ -1,0 +1,27 @@
+﻿#user-delete {
+    width: 350px;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#user-delete h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+#user-delete label, input {
+    display: block;
+}
+
+#user-delete input {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 100%;
+}
+
+#user-delete #btnField {
+    text-align: center;
+}
+
