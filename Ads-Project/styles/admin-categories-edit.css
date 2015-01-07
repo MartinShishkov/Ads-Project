@@ -1,0 +1,29 @@
+﻿#edit-category {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#edit-category h3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+
+#edit-category label, input, .button {
+    margin: 10px;
+}
+
+#edit-category label, input {
+    display: block;
+}
+
+#edit-category input {
+    height: 30px;
+    width: 200px;
+}
+
+#buttons {
+    display: block;
+    text-align: center;
+}

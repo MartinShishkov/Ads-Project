@@ -91,8 +91,10 @@
     <Content Include="libs\jquery.js" />
     <Content Include="libs\jquery.noty.packaged.min.js" />
     <Content Include="styles\admin-ads-styles.css" />
+    <Content Include="styles\admin-categories-edit.css" />
     <Content Include="styles\admin-categories-styles.css" />
     <Content Include="styles\admin-category-create.css" />
+    <Content Include="styles\admin-category-delete.css" />
     <Content Include="styles\admin-delete-ad-styles.css" />
     <Content Include="styles\admin-towns-styles.css" />
     <Content Include="styles\admin-users-styles.css" />

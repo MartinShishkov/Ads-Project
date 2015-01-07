@@ -56,11 +56,15 @@
         }
 
         var deleteCategory = function(id) {
-            return $http.delete(rootUrl + "admin/categories/delete/" + id, getHeaders());
+            return $http.delete(rootUrl + "admin/categories/" + id, getHeaders());
         }
 
         var createCategory = function (category) {
             return $http.post(rootUrl + "admin/categories", category, getHeaders());
+        }
+
+        var editCategory = function(id, category) {
+            return $http.put(rootUrl + "admin/categories/" + id, category, getHeaders());
         }
 
         return {
@@ -73,7 +77,8 @@
             getAllTowns: getAllTowns,
             getAllCategories: getAllCategories,
             deleteCategory: deleteCategory,
-            createCategory: createCategory
+            createCategory: createCategory,
+            editCategory: editCategory
         };
     }
 

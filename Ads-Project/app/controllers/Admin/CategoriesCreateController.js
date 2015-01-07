@@ -21,7 +21,5 @@
         }
     }
 
-
-
     module.controller('categoriesCreateController', categoriesCreateController);
 }());

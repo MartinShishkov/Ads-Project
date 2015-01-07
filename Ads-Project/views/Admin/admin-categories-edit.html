@@ -1,1 +1,12 @@
-﻿<h2>Edit Cat</h2>
+﻿<link href="../../styles/admin-categories-edit.css" rel="stylesheet" />
+<div class="container" id="edit-category">
+    <h3>Edit Category</h3>
+
+    <label for="categoryUsername">Category:</label>
+    <input type="text" name="categoryUsername" ng-model="category.username"/>
+
+    <div id="buttons">
+        <button class="button" ng-click="edit()">Edit</button>
+        <button class="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
