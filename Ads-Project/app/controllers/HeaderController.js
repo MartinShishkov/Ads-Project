@@ -48,6 +48,12 @@
                 case '/admin/users/list':
                     $scope.currentPage = "Ads Administration - Users";
                     break;
+                case '/admin/users/delete/' + $routeParams.userId:
+                    $scope.currentPage = "Ads Administration - Delete User";
+                    break;
+                case '/admin/users/edit/' + $routeParams.userId:
+                    $scope.currentPage = "Ads Administration - Edit User";
+                    break;
                 case '/admin/categories/list':
                     $scope.currentPage = "Ads Administration - Categories";
                     break;
